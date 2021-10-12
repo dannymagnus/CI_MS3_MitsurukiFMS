@@ -15,7 +15,13 @@ SHEET = GSPREAD_CLIENT.open('vehiclebookings')
 catalogue = SHEET.worksheet('catalogue')
 c_data = catalogue.get_all_values()
 appraisals = SHEET.worksheet('appraisals')
-a_data = appraisals.get_all_values()
+
+
+def a_data():
+    a_data = appraisals.get_all_values()
+    return a_data
+
+
 c_dict = catalogue.get_all_records()
 a_dict = appraisals.get_all_records()
 
