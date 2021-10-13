@@ -36,3 +36,8 @@
 - Be able to search vehicles from an automotive engineering fleet to pick vehicles with feature fitments I wish to assess.
 - Add appraisals to the database.
 - Read previous appraisals of particular vehicles so issues can be raised for engineering investigation.
+
+### Site Owner Goals
+- Create an application so that drivers can easily enter vehicle appraisals.
+- Create an application that is easy and intuitive to navigate and provide feedback to the user.
+- Create an application that gives all appraisal data for a vehicle.
