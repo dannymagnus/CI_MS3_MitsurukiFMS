@@ -127,4 +127,4 @@ The vehicle menu gives the user 3 options where they can search and retrieve veh
 *7. As a user I want to be informed if any of my choices are not valid.*
 *8. As a user I want feedback that my choices and actions have been acknowledged and executed.*
 *9. As a site owner, I want the user to be able to select a vehicle from the engineering fleet catalogue.*
-* 12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.*
+*12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.*
