@@ -15,6 +15,7 @@ SHEET = GSPREAD_CLIENT.open('vehiclebookings')
 catalogue = SHEET.worksheet('catalogue')
 c_data = catalogue.get_all_values()
 appraisals = SHEET.worksheet('appraisals')
+dan = "dan"
 
 
 def a_data():

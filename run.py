@@ -1,5 +1,5 @@
-import sheet
-import pprint
+from pprint import pprint
+from sheet1 import a_data
 
 
 def main_menu():
@@ -7,22 +7,39 @@ def main_menu():
     Function to get user input on what they want to do with the system
     """
     choices = 2
-    print('/nWelcome to the Mitsuruki Fleet Management System/n').upper()
-    print('The purpose of this system is to be able to select')
-    print('and view vehicles to appraise.')
-    a_data = a_data()
-    pprint(c_dict)
+    print('Welcome to the test vehicle appraisal system')
+    data = a_data()
+    pprint(data)
     while True:
-        print('')
-        selection = input("What would you like to do?\n\n1:Search vehicle catalogue\n2:Appraisals\n\n")
+        selection = input("What would you like to do?\n\n1:Search vehicle \
+        catalogue\n2:Appraisals\n\n")
         if validateselection(selection, choices):
             print('Accepted')
             selected = int(selection)
             if selected == 1:
-                catalogue_menu()
+                pass
             else:
-                appraisals_menu()
+                pass
             break
+
+
+def validateselection(selection, choices):
+    """
+    Tries values to see if they are numbers and within the value range
+    """
+    try:
+        if not selection.isdigit():
+            raise ValueError(
+                "Please use a number value"
+            )
+        if int(selection) > choices or int(selection) <= 0:
+            raise ValueError(
+                "Please use a number within range"
+                )
+    except ValueError as e:
+        print(f"Invalid selection: {e}")
+        return False
+    return True
 
 
 main_menu()
