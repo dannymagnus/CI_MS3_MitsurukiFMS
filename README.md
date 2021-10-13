@@ -195,3 +195,19 @@ The appraisal menu gives the user 2 options where they can add and search vehicl
 *7. As a user I want to be informed if any of my choices are not valid.*
 *8. As a user I want feedback that my choices and actions have been acknowledged and executed.*
 *12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.*
+
+#### Add Appraisal
+
+This give the user the function of adding an appraisal report to the FMS database(google sheet). The user is prompted to enter vehicle registration, and if vehicle exists, date and then the appraisal details.  The user will then have the option to add this report to the database.
+
+<details><summary>Add appraisal</summary>
+<img src=“docs/features/add-appraisal“>
+</details>
+
+**This screen covers the following user stories:**
+
+*3. As a user I want to be able to add my appraisal details easily.*
+*7. As a user I want to be informed if any of my choices are not valid.*
+*8. As a user I want feedback that my choices and actions have been acknowledged and executed.*
+*11. As a site owner; I want users to be able to submit appraisals which are to be stored in a separate worksheet in the google sheet.*
+*12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.*
