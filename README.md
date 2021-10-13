@@ -97,3 +97,18 @@ VSCode was the IDE used to write the remainder of the project code.
 4. [Diagrams.net](https://app.diagrams.net/) - was used to draw flowchart.
 5. [Google Sheets](https://www.google.co.uk/sheets/about/) - was used to store data outside of the program.  The vehicle catalogue and appraisal data stored in 2 separate sheets.
 6. [Google Cloud Platform](https://cloud.google.com/cloud-console/) - was used to manage access and permissions to the google services, google auth, sheets etc.
+
+## Features
+
+### Main Menu
+![Main Menu](docs/features/feature-main-menu.png)
+
+The main menu gives a paragraph welcome and introduction to the Fleet Management System.  It presents the user with 2 options for the Vehicle Catalogue and the Appraisal Menu respectively.
+
+<details><summary>Main Menu</summary>
+<img src=“docs/features/main-menu“>
+</details>
+
+**This screen covers the following user stories:**
+
+*1. As a user I want the option to search vehicles or manage appraisals*
