@@ -47,3 +47,15 @@
 ### Target Audience
 - Vehicle assessors, engineers and managers.
 - Fleet/product engineers.
+
+### User Stories
+
+#### First-time User 
+1. As a user I want the option to search vehicles or manage appraisals
+2. As a user, I want to be able to to search for a vehicle so I can assess it’s fitment and type.
+3. As a user I want to be able to add my appraisal details easily.
+4. As a user I want to be able to add vehicles from each of the models to the vehicle database.
+5. As a user I want to be able to remove vehicles from the database.
+6. As a user I want to be able to search and see appraisals submitted by drivers.
+7. As a user I want to be informed if any of my choices are not valid.
+8. As a user I want feedback that my choices and actions have been acknowledged and executed.
