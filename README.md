@@ -41,3 +41,9 @@
 - Create an application so that drivers can easily enter vehicle appraisals.
 - Create an application that is easy and intuitive to navigate and provide feedback to the user.
 - Create an application that gives all appraisal data for a vehicle.
+
+## User Experience
+
+### Target Audience
+- Vehicle assessors, engineers and managers.
+- Fleet/product engineers.
