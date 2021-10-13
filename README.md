@@ -162,3 +162,20 @@ This give the user the function of adding a vehicle to the fleet database.  The 
 *9. As a site owner, I want the user to be able to select a vehicle from the engineering fleet catalogue.*
 *10. As a site owner, I want the fleet details to be synced to and from a google sheet.*
 *12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.*
+
+#### Remove Vehicle
+
+This gives the user the function of removing a vehicle from the fleet database.  The user will be prompted for the key values, registration. If data validation is successful and the vehicle exist in the database, and the user confirms the prompt then the vehicle will be removed.
+
+<details><summary>Remove vehicle</summary>
+<img src=“docs/features/remove-vehicle“>
+</details>
+
+**This screen covers the following user stories:**
+
+*5. As a user I want to be able to remove vehicles from the database.*
+*7. As a user I want to be informed if any of my choices are not valid.*
+*8. As a user I want feedback that my choices and actions have been acknowledged and executed.*
+*9. As a site owner, I want the user to be able to select a vehicle from the engineering fleet catalogue.*
+*10. As a site owner, I want the fleet details to be synced to and from a google sheet.*
+*12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.*
