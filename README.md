@@ -27,3 +27,7 @@
 10. [Deployment](#deployment)
 11. [Credits](#credits)
 12. [Acknowledgements](#acknowledgements)
+
+## Project Goals 
+
+- The Fleet Management System is the beginning of a real world application for an automotive company engineering company. Mitsuruki has been used as a fictional as not to infringe any brand or copyright.
