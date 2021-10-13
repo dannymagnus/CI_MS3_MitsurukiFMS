@@ -31,3 +31,8 @@
 ## Project Goals 
 
 - The Fleet Management System is the beginning of a real world application for an automotive company engineering company. Mitsuruki has been used as a fictional as not to infringe any brand or copyright.
+
+### User Goals
+- Be able to search vehicles from an automotive engineering fleet to pick vehicles with feature fitments I wish to assess.
+- Add appraisals to the database.
+- Read previous appraisals of particular vehicles so issues can be raised for engineering investigation.
