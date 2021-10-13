@@ -75,3 +75,9 @@ Below you can see the flowchart, created with [diagrammes.io](www.diagrammes.io)
 <details><summary>Flowchart</summary>
 <img src=“docs/flowcharts/fms-flowchart">
 </details>
+
+### Data models
+
+For this project I have used largely lists, dictionaries and 4 classes for the vehicle lines themselves.
+As the programme is working closely with Google Sheets, I have used lists and dictionaries.  List to work with adding data and dictionaries to search for objects within the sheets.
+I have used classes for the vehicle lines as some have fitments that others don’t.  Where this is the case, those options are removed from user choice.
