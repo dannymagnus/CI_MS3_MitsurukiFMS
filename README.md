@@ -179,3 +179,19 @@ This gives the user the function of removing a vehicle from the fleet database. 
 *9. As a site owner, I want the user to be able to select a vehicle from the engineering fleet catalogue.*
 *10. As a site owner, I want the fleet details to be synced to and from a google sheet.*
 *12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.*
+
+### Appraisal Menu
+
+The appraisal menu gives the user 2 options where they can add and search vehicle appraisals.  Drivers/users can submit their experience as an appraisal and then engineers and fleet/vehicle owners can review the data provided and raise issues for engineers to investigate.
+
+<details><summary>Appraisal Menu</summary>
+<img src=“docs/features/appraisal-menu“>
+</details>
+
+**This screen covers the following user stories:**
+
+*1. As a user I want the option to search vehicles or manage appraisals.*
+*3. As a user I want to be able to add my appraisal details easily.*
+*7. As a user I want to be informed if any of my choices are not valid.*
+*8. As a user I want feedback that my choices and actions have been acknowledged and executed.*
+*12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.*
