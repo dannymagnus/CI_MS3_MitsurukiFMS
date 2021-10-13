@@ -65,3 +65,13 @@
 10. As a site owner, I want the fleet details to be synced to and from a google sheet.
 11. As a site owner; I want users to be able to submit appraisals which are to be stored in a separate worksheet in the google sheet.
 12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.
+
+## Technical Design
+
+### Flow Chart
+
+Below you can see the flowchart, created with [diagrammes.io](www.diagrammes.io)
+
+<details><summary>Flowchart</summary>
+<img src=“docs/flowcharts/fms-flowchart">
+</details>
