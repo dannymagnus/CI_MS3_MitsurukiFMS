@@ -112,3 +112,19 @@ The main menu gives a paragraph welcome and introduction to the Fleet Management
 **This screen covers the following user stories:**
 
 *1. As a user I want the option to search vehicles or manage appraisals*
+
+### Vehicle Menu
+
+The vehicle menu gives the user 3 options where they can search and retrieve vehicle information from a registration giving a description of the vehicle including it’s model type, and fitment of luxury items, in particular in this release, whether heated and/or massage seats are fitted.
+
+<details><summary>Vehicle Menu</summary>
+<img src=“docs/features/vehicle-menu“>
+</details>
+
+**This screen covers the following user stories:**
+
+*1. As a user I want the option to search vehicles or manage appraisals.*
+*7. As a user I want to be informed if any of my choices are not valid.*
+*8. As a user I want feedback that my choices and actions have been acknowledged and executed.*
+*9. As a site owner, I want the user to be able to select a vehicle from the engineering fleet catalogue.*
+* 12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.*
