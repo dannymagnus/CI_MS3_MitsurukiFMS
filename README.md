@@ -211,3 +211,18 @@ This give the user the function of adding an appraisal report to the FMS databas
 *8. As a user I want feedback that my choices and actions have been acknowledged and executed.*
 *11. As a site owner; I want users to be able to submit appraisals which are to be stored in a separate worksheet in the google sheet.*
 *12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.*
+
+#### Search Appraisal
+
+This give the user the function of searching an appraisal report to the FMS database(google sheet). The user is prompted to enter vehicle registration, and if vehicle exists the user will issued a prompt which allows them to display all of the appraisals linked to that vehicle.
+
+<details><summary>Search appraisal</summary>
+<img src=“docs/features/search-appraisal“>
+</details>
+
+**This screen covers the following user stories:**
+
+*3. As a user I want to be able to add my appraisal details easily.*
+*7. As a user I want to be informed if any of my choices are not valid.*
+*8. As a user I want feedback that my choices and actions have been acknowledged and executed.*
+*12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.*
