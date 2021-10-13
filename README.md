@@ -81,3 +81,19 @@ Below you can see the flowchart, created with [diagrammes.io](www.diagrammes.io)
 For this project I have used largely lists, dictionaries and 4 classes for the vehicle lines themselves.
 As the programme is working closely with Google Sheets, I have used lists and dictionaries.  List to work with adding data and dictionaries to search for objects within the sheets.
 I have used classes for the vehicle lines as some have fitments that others don’t.  Where this is the case, those options are removed from user choice.
+
+## Technologies Used
+
+### Languages
+- [Python 3](https://www.python.org/)
+
+### Frameworks & Tools
+1. [Git](https://git-scm.com/)
+- Git was used for version control within VSCode to push the code to GitHub.
+2. [GitHub](https://github.com/)
+- GitHub was used as a remote repository to store project code. 
+3. [Visual Studio Code (VSCode)](https://code.visualstudio.com/)
+VSCode was the IDE used to write the remainder of the project code.
+4. [Diagrams.net](https://app.diagrams.net/) - was used to draw flowchart.
+5. [Google Sheets](https://www.google.co.uk/sheets/about/) - was used to store data outside of the program.  The vehicle catalogue and appraisal data stored in 2 separate sheets.
+6. [Google Cloud Platform](https://cloud.google.com/cloud-console/) - was used to manage access and permissions to the google services, google auth, sheets etc.
