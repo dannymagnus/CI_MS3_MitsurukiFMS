@@ -128,3 +128,20 @@ The vehicle menu gives the user 3 options where they can search and retrieve veh
 *8. As a user I want feedback that my choices and actions have been acknowledged and executed.*
 *9. As a site owner, I want the user to be able to select a vehicle from the engineering fleet catalogue.*
 *12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.*
+
+#### Search vehicle
+
+This give the user the function of searching the fleet database by registration to return the full vehicle description including any special fitment such as heated or massage seats, so the user can assess the vehicle before booking for an appraisal.  This can also be used by engineers to find the spec of the vehicle after an appraisal.  This function will search vehicles on record and return an error if no such vehicle exists.  It will also validate data entry to a degree (eg. Reg length etc).  It does rely to a degree that the user is in earnest trying to complete entry successfully.  Once located, a prompt will be given to ask if the user wishes to display the data.
+
+<details><summary>Search Vehicle</summary>
+<img src=“docs/features/search-vehicle“>
+</details>
+
+**This screen covers the following user stories:**
+
+*1. As a user I want the option to search vehicles or manage appraisals*
+*2. As a user, I want to be able to to search for a vehicle so I can assess it’s fitment and type.*
+*7. As a user I want to be informed if any of my choices are not valid.*
+*8. As a user I want feedback that my choices and actions have been acknowledged and executed.*
+*9. As a site owner, I want the user to be able to select a vehicle from the engineering fleet catalogue.*
+*12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.*
