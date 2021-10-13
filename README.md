@@ -145,3 +145,20 @@ This give the user the function of searching the fleet database by registration 
 *8. As a user I want feedback that my choices and actions have been acknowledged and executed.*
 *9. As a site owner, I want the user to be able to select a vehicle from the engineering fleet catalogue.*
 *12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.*
+
+#### Add Vehicle
+
+This give the user the function of adding a vehicle to the fleet database.  The user will be prompted for the key values, registration, model, colour and fitments. If data validation is successful then the user has the option to add the vehicle.
+
+<details><summary>Add vehicle</summary>
+<img src=“docs/features/add-vehicle“>
+</details>
+
+**This screen covers the following user stories:**
+
+*4. As a user I want to be able to add vehicles from each of the models to the vehicle database.*
+*7. As a user I want to be informed if any of my choices are not valid.*
+*8. As a user I want feedback that my choices and actions have been acknowledged and executed.*
+*9. As a site owner, I want the user to be able to select a vehicle from the engineering fleet catalogue.*
+*10. As a site owner, I want the fleet details to be synced to and from a google sheet.*
+*12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.*
