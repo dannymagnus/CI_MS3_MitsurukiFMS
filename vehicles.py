@@ -72,3 +72,21 @@ class Slicker(Car):
         print(f"Heated seats: {self.heated}")
         print(f"Massage seats: {self.massage}")
         print(f"Color: {self.color}")
+
+
+class Slider(Car):
+    """Creates an instance of 'Slider' vehicle object"""
+    def __init__(self, registration, color, heated, massage):
+        super().__init__(registration, color)
+        self.model = "Slicker"
+        self.powertrain = "Combustion"
+        self.massage = massage
+        self.heated = heated
+        self.type = "Saloon"
+
+    def description(self):
+        print(f"{self.registration} is the {self.model} model and ")
+        print(f"is a {self.type} vehicle with a {self.powertrain} powertrain.")
+        print(f"Heated seats: {self.heated}")
+        print(f"Massage seats: {self.massage}")
+        print(f"Color: {self.color}")
