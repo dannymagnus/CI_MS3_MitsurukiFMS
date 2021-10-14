@@ -99,7 +99,7 @@ def vehicle_validation(reg, vehicles):
         if not [element for element in vehicles if element['Reg'] == reg]:
             raise ValueError("No such vehicle in fleet management database")
     except ValueError as e:
-        print(f"Invalid selection: {e}")
+        print(f"Invalid selection: {e} ")
         return False
     return True
 
