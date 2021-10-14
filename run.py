@@ -4,7 +4,8 @@ from sheet1 import c_dict
 
 from vehicles import Car
 from vehicles import ETronic
-
+from vehicles import valid_models
+from vehicles import catalogue_deconstruct
 
 def main_menu():
     """
@@ -19,7 +20,7 @@ def main_menu():
             print('Accepted')
             selected = int(selection)
             if selected == 1:
-                pass
+                vehicle_menu()
             else:
                 pass
             break
@@ -109,7 +110,7 @@ def search_car_reg(reg):
     Function to search car in gsheet vehicle catalogue, uses deconstruct
     function to create vehicle instance and print description
     """
-    locatedcar = [x for x in c_dict if x['Reg'] == reg]
+    locatedcar = [x for x in c_dict() if x['Reg'] == reg]
     print("\nThe car has been located........")
     while True:
         choice = (input("\nWould you like to view vehicle specification?:").upper())
@@ -125,6 +126,25 @@ def search_car_reg(reg):
             break
         else:
             print('\nPlease enter a valid choice')
+
+
+def validate_create(reg, model, color, heated):
+    try:
+        if not len(reg) == 7:
+            raise ValueError(
+                "Registration character length should be 7")
+        if model.isdigit() is True:
+            raise ValueError("Model should contain letters only.")
+        if model.capitalize() not in valid_models:
+            raise ValueError(f"No such model exists. Your model was {model}")
+        if color.capitalize().isdigit() is True:
+            raise ValueError("Color should be letters only")
+        if heated.upper() not in ['Y', 'N']:
+            raise ValueError("Please enter the letters Y or N only")
+    except ValueError as e:
+        print(f"Invalid selection: {e}.  Please try again.")
+        return False
+    return True
 
 
 main_menu()

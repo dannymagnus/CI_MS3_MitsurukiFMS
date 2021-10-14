@@ -92,3 +92,25 @@ class Slider(Car):
         print(f"Heated seats: {self.heated}")
         print(f"Massage seats: {self.massage}")
         print(f"Color: {self.color}")
+
+
+def catalogue_deconstruct(car):
+    """Function to take gspread data and conditionallly create vehicle instance,
+    used with search_car_reg()"""
+    car = car[0]
+    print(car)
+    if car['Model'] == 'Trojan':
+        thiscar = Trojan(
+            car['Reg'], car['Color'], car['Heated'], car['Massage'])
+        return thiscar
+    elif car['Model'] == 'Slicker':
+        thiscar = Slicker(
+            car['Reg'], car['Color'], car['Heated'], car['Massage'])
+        return thiscar
+    elif car['Model'] == 'Slider':
+        thiscar = Slicker(
+            car['Reg'], car['Color'], car['Heated'], car['Massage'])
+        return thiscar
+    else:
+        thiscar = ETronic(car['Reg'], car['Color'], car['Heated'])
+        return thiscar
