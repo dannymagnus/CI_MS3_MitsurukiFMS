@@ -99,9 +99,32 @@ def vehicle_validation(reg, vehicles):
         if not [element for element in vehicles if element['Reg'] == reg]:
             raise ValueError("No such vehicle in fleet management database")
     except ValueError as e:
-        print(f"Invalid selection: {e} ")
+        print(f"Invalid selection: {e}")
         return False
     return True
+
+
+def search_car_reg(reg):
+    """
+    Function to search car in gsheet vehicle catalogue, uses deconstruct
+    function to create vehicle instance and print description
+    """
+    locatedcar = [x for x in c_dict if x['Reg'] == reg]
+    print("\nThe car has been located........")
+    while True:
+        choice = (input("\nWould you like to view vehicle specification?:").upper())
+        if choice in ["YES", "Y"]:
+            car_details = catalogue_deconstruct(locatedcar)
+            print(car_details.description())
+            input('\n Press <enter> to the vehicle menu....')
+            vehicle_menu()
+            break
+        elif choice in ['N', 'No']:
+            print('\nReturning to the vehicle menu...')
+            vehicle_menu()
+            break
+        else:
+            print('\nPlease enter a valid choice')
 
 
 main_menu()

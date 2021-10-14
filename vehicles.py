@@ -1,5 +1,7 @@
 from sheet1 import a_dict
 
+valid_models = ['Slicker', 'Trojan', 'Slider', 'Etronic']
+
 
 class Car:
     """
