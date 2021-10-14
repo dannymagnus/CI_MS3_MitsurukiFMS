@@ -12,7 +12,6 @@ def main_menu():
     choices = 2
     print('Welcome to the test vehicle appraisal system')
     data = a_data()
-    pprint(data)
     while True:
         selection = input("What would you like to do?\n\n1:Search vehicle \
         catalogue\n2:Appraisals\n\n")
@@ -45,8 +44,4 @@ def validateselection(selection, choices):
     return True
 
 
-car = Car('VE80PPF', 'Blue')
-print(car.registration)
-print(car.describe())
-print(car.get_appraisal())
 main_menu()
