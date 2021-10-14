@@ -28,4 +28,6 @@ def a_dict():
     return a_dict
 
 
-c_dict = catalogue.get_all_records()
+def c_dict():
+    c_dict = catalogue.get_all_records()
+    return c_dict
