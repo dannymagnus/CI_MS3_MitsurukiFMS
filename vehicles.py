@@ -114,3 +114,13 @@ def catalogue_deconstruct(car):
     else:
         thiscar = ETronic(car['Reg'], car['Color'], car['Heated'])
         return thiscar
+
+
+def create_vehicle_list(obj):
+    """Function to convert car instance list"""
+    print('add_vehicle() called')
+    car = [
+        obj.registration, obj.model,
+        obj.powertrain, obj.color, obj.heated,
+        obj.massage]
+    return car

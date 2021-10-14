@@ -9,6 +9,8 @@ from vehciles import Trojan
 from vehciles import Slicker
 from vehicles import valid_models
 from vehicles import catalogue_deconstruct
+from vehicles import create_vehicle_list
+
 
 def main_menu():
     """
@@ -183,7 +185,7 @@ def create_vehicle():
     print('\nYou have inputted the following details...')
     print(vehicle.description())
     if (input('Would you like to add this to the fleet database?:  ').capitalize())[0] == 'Y':
-        car_list = add_vehicle(vehicle)
+        car_list = create_vehicle_list(vehicle)
         if append_car(catalogue, car_list):
             print('\nVehicle successfully added...')
             print('\nReturning to the vehicle menu...')
