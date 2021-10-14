@@ -17,8 +17,8 @@ class Car:
         return dates, appraisals
 
     def describe(self):
-        print(f"This car has the registration {self.registration} and\
-              is {self.color} in color")
+        print(f"This car has the registration {self.registration} ")
+        print(f"and is {self.color} in color")
 
 
 class ETronic(Car):
@@ -32,7 +32,7 @@ class ETronic(Car):
         self.type = "Estate"
 
     def description(self):
-        print(
-            f"{self.registration} is the {self.model} model and is a {self.type} vehicle with a {self.powertrain} powertrain.")
+        print(f"{self.registration} is the {self.model} model and ")
+        print(f"is a {self.type} vehicle with a {self.powertrain} powertrain.")
         print(f"Heated seats: {self.heated}")
         print(f"Massage seats: {self.massage}")
