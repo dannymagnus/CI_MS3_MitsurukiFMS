@@ -4,6 +4,9 @@ from sheet1 import c_dict
 
 from vehicles import Car
 from vehicles import ETronic
+from vehciles import Slider
+from vehciles import Trojan
+from vehciles import Slicker
 from vehicles import valid_models
 from vehicles import catalogue_deconstruct
 
@@ -145,6 +148,57 @@ def validate_create(reg, model, color, heated):
         print(f"Invalid selection: {e}.  Please try again..")
         return False
     return True
+
+
+def create_vehicle():
+    """
+    To create a vehicle from user input and append
+    """
+    while True:
+        reg = input('\nEnter vehicle registration: ').upper()
+        model = input('Model: ').capitalize()
+        color = input('Color: ').capitalize()
+        heated = input('Are heated seats fitted?(y/n): ').capitalize()
+        massage = ""
+        if validate_create(reg, model, color, heated):
+            model = model.capitalize()
+            if model == 'Trojan' or model == 'Slicker' or model == 'Slider':
+                while True:
+                    massage = (input('Are massage seats fitted? (y/n): ').upper())
+                    if massage in ['Y', 'N']:
+                        break
+                    else:
+                        print("\nEnter Y or N only")
+            if model == 'Slider':
+                vehicle = Slider(reg, color, heated, massage)
+            elif model == 'Trojan':
+                vehicle = Trojan(reg, color, heated, massage)
+            elif model == 'Slicker':
+                vehicle = Slicker(reg, color, heated, massage)
+            else:
+                vehicle = ETronic(reg, color, heated)
+            break
+        else:
+            print("The data inputted is invalid")
+    print('\nYou have inputted the following details...')
+    print(vehicle.description())
+    if (input('Would you like to add this to the fleet database?:  ').capitalize())[0] == 'Y':
+        car_list = add_vehicle(vehicle)
+        if append_car(catalogue, car_list):
+            print('\nVehicle successfully added...')
+            print('\nReturning to the vehicle menu...')
+            input('Press <enter> to continue...')
+            vehicle_menu()
+        else:
+            print("Sorry an error has occurred")
+            print("Please try again later")
+            input('Press <enter> to continue...')
+            vehicle_menu()
+    else:
+        print('\nYour choice was to not add to the vehicle database')
+        print('\nReturning to the vehicle menu.....')
+        input('Press <enter> to continue....')
+        vehicle_menu()
 
 
 main_menu()
