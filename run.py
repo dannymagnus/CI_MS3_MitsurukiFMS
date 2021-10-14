@@ -1,6 +1,9 @@
 from pprint import pprint
 from sheet1 import a_data
 
+from vehicles import Car
+from vehicles import ETronic
+
 
 def main_menu():
     """
@@ -42,4 +45,8 @@ def validateselection(selection, choices):
     return True
 
 
+car = Car('VE80PPF', 'Blue')
+print(car.registration)
+print(car.describe())
+print(car.get_appraisal())
 main_menu()

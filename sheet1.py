@@ -23,6 +23,9 @@ def a_data():
     return a_data
 
 
-c_dict = catalogue.get_all_records()
-a_dict = appraisals.get_all_records()
+def a_dict():
+    a_dict = appraisals.get_all_records()
+    return a_dict
 
+
+c_dict = catalogue.get_all_records()
