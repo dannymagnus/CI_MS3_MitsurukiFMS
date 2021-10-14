@@ -142,7 +142,7 @@ def validate_create(reg, model, color, heated):
         if heated.upper() not in ['Y', 'N']:
             raise ValueError("Please enter the letters Y or N only")
     except ValueError as e:
-        print(f"Invalid selection: {e}.  Please try again.")
+        print(f"Invalid selection: {e}.  Please try again..")
         return False
     return True
 
