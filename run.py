@@ -30,7 +30,7 @@ def main_menu():
             if selected == 1:
                 vehicle_menu()
             else:
-                pass
+                appraisals_menu()
             break
 
 
@@ -223,5 +223,11 @@ def appraisals_menu():
             input('Press enter to continue')
         else:
             print('\nLoading your choice')
+        if am_selection == '1':
+            while True:
+                reg = input('Please enter the vehicle registration: ')
+                if vehicle_validation(reg, c_dict()):
+                    print('\n Your vehicle has been located...\n')
+
 
 main_menu()
