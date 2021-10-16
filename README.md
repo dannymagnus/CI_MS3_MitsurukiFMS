@@ -73,7 +73,7 @@
 Below you can see the flowchart, created with [diagrammes.io](www.diagrammes.io)
 
 <details><summary>Flowchart</summary>
-<img src=“docs/flowchart/flowchart“>
+<img src=“docs/flowchart/flowchart.png“>
 </details>
 
 ### Data models
