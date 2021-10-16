@@ -73,7 +73,8 @@ def vehicle_menu():
         if vm_selection == '1':
             while True:
                 reg = input(
-                    'Please enter the vehicle registration or <enter> to exit: ')
+                    'Enter the vehicle registration or <enter> to exit: '
+                    )
                 if vehicle_validation(reg, c_dict()):
                     search_car_reg(reg)
                 elif reg == '':
@@ -118,7 +119,8 @@ def search_car_reg(reg):
     locatedcar = [x for x in c_dict() if x['Reg'] == reg]
     print("\nThe car has been located........")
     while True:
-        choice = (input("\nWould you like to view vehicle specification?:").upper())
+        option = input("\nWould you like to view vehicle specification?:")
+        choice = option.upper()
         if choice in ["YES", "Y"]:
             car_details = catalogue_deconstruct(locatedcar)
             print(car_details.description())
@@ -166,7 +168,9 @@ def create_vehicle():
             model = model.capitalize()
             if model == 'Trojan' or model == 'Slicker' or model == 'Slider':
                 while True:
-                    massage = (input('Are massage seats fitted? (y/n): ').upper())
+                    massage = (
+                        input('Are massage seats fitted? (y/n): ').upper()
+                        )
                     if massage in ['Y', 'N']:
                         break
                     else:
@@ -184,7 +188,8 @@ def create_vehicle():
             print("The data inputted is invalid")
     print('\nYou have inputted the following details...')
     print(vehicle.description())
-    if (input('Would you like to add this to the fleet database?:  ').capitalize())[0] == 'Y':
+    choice = input('Would you like to add this to the fleet database?:  ')
+    if choice.capitalize()[0] == 'Y':
         car_list = create_vehicle_list(vehicle)
         if append_car(catalogue, car_list):
             print('\nVehicle successfully added...')
@@ -202,5 +207,21 @@ def create_vehicle():
         input('Press <enter> to continue....')
         vehicle_menu()
 
+
+def appraisals_menu():
+    """Appraisals sub menu, options to create or view appraisals"""
+    am_selection = ''
+    while am_selection not in ['1', '2', '3']:
+        print('\n\nAppraisals menu')
+        print('\nHere you can search for or add appraisals')
+        print('\n1: Add vehicle appraisal')
+        print('\n2: Search vehicle appraisal')
+        print('\n3: Return to the main menu')
+        am_selection = input('\nWhat do you want to do?: ')
+        if am_selection not in ['1', '2', '3', '4']:
+            print('\nPlease select a valid option (1), (2), (3) or (4)')
+            input('Press enter to continue')
+        else:
+            print('\nLoading your choice')
 
 main_menu()
