@@ -1,3 +1,5 @@
+import datetime
+
 from pprint import pprint
 from sheet1 import a_data
 from sheet1 import c_dict
@@ -242,13 +244,24 @@ def create_appraisal_details():
         date = input('\nWhat is the date of appraisal? (dd/mm/yy): ')
         day, month, year = date.split('/')
         appraisal = input('\nPlease enter the vehicle appraisal: ')
-        if validate_app_create(day, month, year):
+        if validate_app_input(day, month, year):
             return date, appraisal
         elif input('\n"Would you like to try again (y/n)?') == 'n':
             print('\nReturning to appraisals menu....)')
             appraisals_menu()
         else:
             print('\nPlease try again...')
+
+
+def validate_app_input(day, month, year):
+    """Data validation for date format input"""
+    try:
+        if not datetime.datetime(int(year), int(month), int(day)):
+            raise ValueError("Please enter a valid date format")
+    except ValueError as e:
+        print(f'Entry invalid: {e}')
+        return False
+    return True
 
 
 main_menu()
