@@ -38,3 +38,10 @@ def append_car(worksheet, car):
     """Adds vehicle list to google sheet"""
     worksheet.append_row(car)
     return True
+
+
+def delete_vehicle(reg):
+    cell = catalogue.find(reg)
+    row_number = cell.row
+    catalogue.delete_rows(row_number)
+    print('\nVehicle was successfully deleted.......')

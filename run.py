@@ -3,12 +3,13 @@ from sheet1 import a_data
 from sheet1 import c_dict
 from sheet1 import append_car
 from sheet1 import catalogue
+from sheet1 import delete_vehicle
 
 from vehicles import Car
 from vehicles import ETronic
-from vehciles import Slider
-from vehciles import Trojan
-from vehciles import Slicker
+from vehicles import Slider
+from vehicles import Trojan
+from vehicles import Slicker
 from vehicles import valid_models
 from vehicles import catalogue_deconstruct
 from vehicles import create_vehicle_list
@@ -88,11 +89,8 @@ def vehicle_menu():
                 reg = input('\nPlease input the vehicle registration: ')
                 if reg == "":
                     vehicle_menu()
-                elif vehicle_validation(reg, c_dict):
-                    cell = catalogue.find(reg)
-                    row_number = cell.row
-                    catalogue.delete_rows(row_number)
-                    print('\nVehicle was successfully deleted.......')
+                elif vehicle_validation(reg, c_dict()):
+                    delete_vehicle(reg)
         else:
             main_menu()
 
