@@ -228,6 +228,7 @@ def appraisals_menu():
                 reg = input('Please enter the vehicle registration: ')
                 if vehicle_validation(reg, c_dict()):
                     print('\n Your vehicle has been located...\n')
+                    car = search(reg, c_dict())[0]
 
 
 main_menu()

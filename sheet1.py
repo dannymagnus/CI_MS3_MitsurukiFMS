@@ -45,3 +45,9 @@ def delete_vehicle(reg):
     row_number = cell.row
     catalogue.delete_rows(row_number)
     print('\nVehicle was successfully deleted.......')
+
+
+def search(reg, vehicles):
+    """Function to search for vehicle reg in gsheet vehicle catalogue"""
+    locatedcar = [x for x in c_dict if x['Reg'] == reg]
+    return locatedcar
