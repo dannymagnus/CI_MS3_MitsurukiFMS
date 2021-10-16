@@ -236,6 +236,8 @@ def appraisals_menu():
                     print(f"Model: {car['Model']}")
                     car_list_values = list(car.values())
                     date, appraisal = create_appraisal_details()
+                    car_list_values.append(date)
+                    car_list_values.append(appraisal)
 
 
 def create_appraisal_details():
