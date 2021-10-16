@@ -7,6 +7,7 @@ from sheet1 import append_car
 from sheet1 import catalogue
 from sheet1 import delete_vehicle
 from sheet1 import search
+from sheet1 import appraisals_list
 
 from vehicles import Car
 from vehicles import ETronic
@@ -247,7 +248,7 @@ def appraisals_menu():
                             print('\nReturning to appraisals menu....')
                             appraisals_menu()
                         elif add_appraisal_input == 'y':
-                            append_car(appraisals_list, car_list_values)
+                            append_car(appraisals_list(), car_list_values)
 
 
 def create_appraisal_details():
