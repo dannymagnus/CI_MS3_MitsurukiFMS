@@ -51,3 +51,8 @@ def search(reg, vehicles):
     """Function to search for vehicle reg in gsheet vehicle catalogue"""
     locatedcar = [x for x in c_dict() if x['Reg'] == reg]
     return locatedcar
+
+
+def appraisals_list():
+    appraisals_list = SHEET.worksheet('appraisals')
+    return appraisals_list

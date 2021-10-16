@@ -246,6 +246,8 @@ def appraisals_menu():
                         if add_appraisal_input == 'n':
                             print('\nReturning to appraisals menu....')
                             appraisals_menu()
+                        elif add_appraisal_input == 'y':
+                            append_car(appraisals_list, car_list_values)
 
 
 def create_appraisal_details():
