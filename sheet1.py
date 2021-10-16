@@ -49,5 +49,5 @@ def delete_vehicle(reg):
 
 def search(reg, vehicles):
     """Function to search for vehicle reg in gsheet vehicle catalogue"""
-    locatedcar = [x for x in c_dict if x['Reg'] == reg]
+    locatedcar = [x for x in c_dict() if x['Reg'] == reg]
     return locatedcar

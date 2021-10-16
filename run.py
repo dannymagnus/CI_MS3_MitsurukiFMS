@@ -4,6 +4,7 @@ from sheet1 import c_dict
 from sheet1 import append_car
 from sheet1 import catalogue
 from sheet1 import delete_vehicle
+from sheet1 import search
 
 from vehicles import Car
 from vehicles import ETronic
@@ -229,6 +230,25 @@ def appraisals_menu():
                 if vehicle_validation(reg, c_dict()):
                     print('\n Your vehicle has been located...\n')
                     car = search(reg, c_dict())[0]
+                    print(f"Vehicle: {car['Reg']}")
+                    print(f"Model: {car['Model']}")
+                    car_list_values = list(car.values())
+                    date, appraisal = create_appraisal_details()
+
+
+def create_appraisal_details():
+    """Function to create an appraisal"""
+    while True:
+        date = input('\nWhat is the date of appraisal? (dd/mm/yy): ')
+        day, month, year = date.split('/')
+        appraisal = input('\nPlease enter the vehicle appraisal: ')
+        if validate_app_create(day, month, year):
+            return date, appraisal
+        elif input('\n"Would you like to try again (y/n)?') == 'n':
+            print('\nReturning to appraisals menu....)')
+            appraisals_menu()
+        else:
+            print('\nPlease try again...')
 
 
 main_menu()
