@@ -238,6 +238,14 @@ def appraisals_menu():
                     date, appraisal = create_appraisal_details()
                     car_list_values.append(date)
                     car_list_values.append(appraisal)
+                    add_appraisal_input = ""
+                    while add_appraisal_input not in ['y', 'n']:
+                        add_appraisal_input = input(
+                            '\nWould you like to add this to the database?: '
+                            )
+                        if add_appraisal_input == 'n':
+                            print('\nReturning to appraisals menu....')
+                            appraisals_menu()
 
 
 def create_appraisal_details():
