@@ -249,6 +249,18 @@ def appraisals_menu():
                             appraisals_menu()
                         elif add_appraisal_input == 'y':
                             append_car(appraisals_list(), car_list_values)
+                            print('\nAdded to appraisals database')
+                            print('\nReturning to appraisals menu,')
+                            input('\nPress enter to continue....')
+                            appraisals_menu()
+                        else:
+                            print('That is not a valid selection.')
+                            print('Please enter y or n only')
+                elif input('\n"Would you like to try again (y/n)?') == 'n':
+                    print('\nReturning to appraisals menu....)')
+                    appraisals_menu()
+                else:
+                    print('\nPlease try again...')
 
 
 def create_appraisal_details():
