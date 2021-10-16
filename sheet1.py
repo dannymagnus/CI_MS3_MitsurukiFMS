@@ -31,3 +31,10 @@ def a_dict():
 def c_dict():
     c_dict = catalogue.get_all_records()
     return c_dict
+
+
+def append_car(worksheet, car):
+    print('append_car() called')
+    """Adds vehicle list to google sheet"""
+    worksheet.append_row(car)
+    return True

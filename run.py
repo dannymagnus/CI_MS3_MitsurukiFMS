@@ -1,6 +1,8 @@
 from pprint import pprint
 from sheet1 import a_data
 from sheet1 import c_dict
+from sheet1 import append_car
+from sheet1 import catalogue
 
 from vehicles import Car
 from vehicles import ETronic
