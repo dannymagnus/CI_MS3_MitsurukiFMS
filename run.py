@@ -26,8 +26,10 @@ def main_menu():
     choices = 2
     print('Welcome to the test vehicle appraisal system')
     while True:
-        selection = input("What would you like to do?\n\n1:Search vehicle \
-        catalogue\n2:Appraisals\n\n")
+        print('\nMain menu\n').upper()
+        print('\n1:Search vehicle catalogue')
+        print('2:Appraisals\n\n')
+        selection = input("\nWhat would you like to do?: ")
         if validateselection(selection, choices):
             print('Accepted')
             selected = int(selection)
