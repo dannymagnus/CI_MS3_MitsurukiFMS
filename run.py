@@ -19,6 +19,7 @@ from vehicles import catalogue_deconstruct
 from vehicles import create_vehicle_list
 
 divider = '-' * 20
+vehicle_return = "Press <enter> to return the vehicle menu..."
 
 
 def main_menu():
@@ -101,11 +102,23 @@ def vehicle_menu():
         elif vm_selection == '3':
             while True:
                 print('\nTo return to the vehicle menu press enter...')
-                reg = input('\nPlease input the vehicle registration: ')
+                reg_input = input('\nPlease input the vehicle registration: ')
+                reg = reg_input.upper()
                 if reg == "":
                     vehicle_menu()
                 elif vehicle_validation(reg, c_dict()):
-                    delete_vehicle(reg)
+                    print(f'\nThis will delete vehicle {reg}')
+                    print('\nThe following action cannot be reversed')
+                    delete_input = input('\nDo you wish to proceed?: ')
+                    proceed = delete_input[0].upper()
+                    if proceed == 'Y':
+                        delete_vehicle(reg)
+                        input(vehicle_return)
+                        vehicle_menu()
+                        break
+                    else:
+                        print('\nVehicle not deleted...')
+                        input('\nPress <enter> to return to vehicle menu')
         elif vm_selection == '4':
             main_menu()
         else:
@@ -135,7 +148,7 @@ def search_car_reg(reg):
     locatedcar = [x for x in c_dict() if x['Reg'] == reg]
     print("\nThe car has been located........")
     while True:
-        option = input("\nWould you like to view vehicle specification?:")
+        option = input("\nWould you like to view vehicle specification?: ")
         choice = option[0].upper()
         if choice == "Y":
             car_details = catalogue_deconstruct(locatedcar)
@@ -161,8 +174,6 @@ def validate_create(reg, model, color, heated):
         if not len(reg) == 7:
             raise ValueError(
                 "Registration character length should be 7")
-        if model.isdigit() is True:
-            raise ValueError("Model should contain letters only.")
         if model.capitalize() not in valid_models:
             raise ValueError(f"No such model exists. Your model was {model}")
         if color.capitalize().isdigit() is True:
