@@ -124,3 +124,5 @@ def create_vehicle_list(obj):
         obj.powertrain, obj.color, obj.heated,
         obj.massage]
     return car
+
+
