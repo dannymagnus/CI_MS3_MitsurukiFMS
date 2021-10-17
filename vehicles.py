@@ -98,7 +98,6 @@ def catalogue_deconstruct(car):
     """Function to take gspread data and conditionallly create vehicle instance,
     used with search_car_reg()"""
     car = car[0]
-    print(car)
     if car['Model'] == 'Trojan':
         thiscar = Trojan(
             car['Reg'], car['Color'], car['Heated'], car['Massage'])

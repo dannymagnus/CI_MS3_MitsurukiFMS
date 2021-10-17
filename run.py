@@ -18,17 +18,21 @@ from vehicles import valid_models
 from vehicles import catalogue_deconstruct
 from vehicles import create_vehicle_list
 
+divider = '-' * 20
+
 
 def main_menu():
     """
     Function to get user input on what they want to do with the system
     """
     choices = 2
-    print('Welcome to the test vehicle appraisal system')
+    print(('\n\nWelcome to the test vehicle appraisal system\n').upper())
     while True:
-        print('\nMain menu\n').upper()
+        print(divider)
+        print(('Main menu').upper())
+        print(divider)
         print('\n1:Search vehicle catalogue')
-        print('2:Appraisals\n\n')
+        print('\n2:Appraisals\n')
         selection = input("\nWhat would you like to do?: ")
         if validateselection(selection, choices):
             print('Accepted')
@@ -55,6 +59,7 @@ def validateselection(selection, choices):
                 )
     except ValueError as e:
         print(f"Invalid selection: {e}")
+        input('Press <enter> to continue')
         return False
     return True
 
@@ -63,10 +68,12 @@ def vehicle_menu():
     """Vehicle sub menu, gives options for search, add and remove vehicles"""
     vm_selection = ''
     while vm_selection not in ['1', '2', '3', '4']:
-        print('\nVehicle Menu')
-        print('Welcome to the vehicle menu\n')
-        print('Here you can search vehciles in the current engineering fleet')
-        print('You can also add and remove vehicles')
+        print('\n')
+        print(divider)
+        print(('Vehicle Menu').upper())
+        print(divider)
+        print('\nHere you can search vehciles in the current engineering fleet.')
+        print('You can also add and remove vehicles.')
         print('\n1: Search for a vehicle')
         print('\n2: Add a vehicle')
         print('\n3: Remove a vehicle')
@@ -78,9 +85,10 @@ def vehicle_menu():
             print('\nLoading your choice')
         if vm_selection == '1':
             while True:
-                reg = input(
-                    'Enter the vehicle registration or <enter> to exit: '
+                reg_input = input(
+                    '\nEnter the vehicle registration or <enter> to exit: '
                     )
+                reg = reg_input.upper()
                 if vehicle_validation(reg, c_dict()):
                     search_car_reg(reg)
                 elif reg == '':
@@ -98,8 +106,10 @@ def vehicle_menu():
                     vehicle_menu()
                 elif vehicle_validation(reg, c_dict()):
                     delete_vehicle(reg)
-        else:
+        elif vm_selection == '4':
             main_menu()
+        else:
+            input('\nPress <enter> to try again...')
 
 
 def vehicle_validation(reg, vehicles):
@@ -126,14 +136,19 @@ def search_car_reg(reg):
     print("\nThe car has been located........")
     while True:
         option = input("\nWould you like to view vehicle specification?:")
-        choice = option.upper()
-        if choice in ["YES", "Y"]:
+        choice = option[0].upper()
+        if choice == "Y":
             car_details = catalogue_deconstruct(locatedcar)
+            print('\n')
+            print(divider)
             print(car_details.description())
-            input('\n Press <enter> to the vehicle menu....')
+            print(divider)
+            input(
+                '\nPress <enter> to return to the vehicle menu....'
+                )
             vehicle_menu()
             break
-        elif choice in ['N', 'No']:
+        elif choice == 'N':
             print('\nReturning to the vehicle menu...')
             vehicle_menu()
             break
