@@ -261,6 +261,11 @@ def appraisals_menu():
                     appraisals_menu()
                 else:
                     print('\nPlease try again...')
+        elif am_selection == '2':
+            while True:
+                reg = input('\nPlease enter vehicle registration: ')
+                if vehicle_validation(reg, c_dict()):
+                    print('\n Your vehicle has been located...\n')
 
 
 def create_appraisal_details():
