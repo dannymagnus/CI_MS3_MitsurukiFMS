@@ -266,6 +266,23 @@ def appraisals_menu():
                 reg = input('\nPlease enter vehicle registration: ')
                 if vehicle_validation(reg, c_dict()):
                     print('\n Your vehicle has been located...\n')
+                    car = search(reg, c_dict())[0]
+                    print(f"Vehicle: {car['Reg']}")
+                    print(f"Model: {car['Model']}")
+                    car_list_values = list(car.values())
+                    car_instance = Car(car_list_values[0], car_list_values[3])
+                    dates, appraisals = car_instance.get_appraisal()
+                    print('\nPress enter to print all appraisals')
+                    input('for this vehicle...')
+                    for d, a in zip(dates, appraisals):
+                        print(f"\nDate: {d}")
+                        print(f"\nDetails: {a}\n")
+                        print('-'*20)
+                    print('\nReport complete.')
+                    input('\nPress enter to return to appraisals menu...')
+                    appraisals_menu()
+        else:
+            main_menu()
 
 
 def create_appraisal_details():
