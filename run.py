@@ -19,7 +19,7 @@ from vehicles import catalogue_deconstruct
 from vehicles import create_vehicle_list
 
 divider = '-' * 20
-vehicle_return = "Press <enter> to return the vehicle menu..."
+vehicle_return = "\nPress <enter> to return the vehicle menu..."
 
 
 def main_menu():
@@ -244,7 +244,10 @@ def appraisals_menu():
     """Appraisals sub menu, options to create or view appraisals"""
     am_selection = ''
     while am_selection not in ['1', '2', '3']:
-        print('\n\nAppraisals menu')
+        print('\n')
+        print(divider)
+        print(('Appraisals menu').upper())
+        print(divider)
         print('\nHere you can search for or add appraisals')
         print('\n1: Add vehicle appraisal')
         print('\n2: Search vehicle appraisal')
@@ -257,7 +260,7 @@ def appraisals_menu():
             print('\nLoading your choice')
         if am_selection == '1':
             while True:
-                reg = input('Please enter the vehicle registration: ')
+                reg = input('\nPlease enter the vehicle registration: ')
                 if vehicle_validation(reg, c_dict()):
                     print('\n Your vehicle has been located...\n')
                     car = search(reg, c_dict())[0]
@@ -305,7 +308,7 @@ def appraisals_menu():
                     for d, a in zip(dates, appraisals):
                         print(f"\nDate: {d}")
                         print(f"\nDetails: {a}\n")
-                        print('-'*20)
+                        print(divider)
                     print('\nReport complete.')
                     input('\nPress enter to return to appraisals menu...')
                     appraisals_menu()
