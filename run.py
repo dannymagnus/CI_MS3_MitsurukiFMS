@@ -48,6 +48,8 @@ def main_menu():
 def validateselection(selection, choices):
     """
     Tries values to see if they are numbers and within the value range
+    @param selection(int): Selected menu option from user input on what they want to do with the system
+    @param choices(int): Number of menu items that exist in range
     """
     try:
         if not selection.isdigit():
@@ -66,7 +68,10 @@ def validateselection(selection, choices):
 
 
 def vehicle_menu():
-    """Vehicle sub menu, gives options for search, add and remove vehicles"""
+    """
+    Vehicle sub menu, gives options for search, add and remove vehicles
+    and calls relevent functions to execute request
+    """
     vm_selection = ''
     while vm_selection not in ['1', '2', '3', '4']:
         print('\n')
@@ -128,6 +133,9 @@ def vehicle_menu():
 def vehicle_validation(reg, vehicles):
     """
     Data validation function to check vehicle exists in the database
+    and that the character length is valid
+    @param reg(string): Vehicle registration as entered by user input
+    @param vehicles(object): List of vehicles derived from gsheet
     """
     try:
         if len(reg) != 7:
@@ -144,6 +152,7 @@ def search_car_reg(reg):
     """
     Function to search car in gsheet vehicle catalogue, uses deconstruct
     function to create vehicle instance and print description
+    @param reg(string): Vehicle registration as entered by user input
     """
     locatedcar = [x for x in c_dict() if x['Reg'] == reg]
     print("\nThe car has been located........")
@@ -170,6 +179,13 @@ def search_car_reg(reg):
 
 
 def validate_create(reg, model, color, heated):
+    """
+    Validates the input from the user that the vehicle is of valid type(s)
+    @param reg(string): Vehicle registration as entered by user input
+    @param model(string): Vehicle model as entered by user input
+    @param color(string): Vehicle color as entered by user input
+    @param heated(string): Vehicle heated (y/n) as entered by user input
+    """
     try:
         if not len(reg) == 7:
             raise ValueError(
@@ -188,7 +204,9 @@ def validate_create(reg, model, color, heated):
 
 def create_vehicle():
     """
-    To create a vehicle from user input and append
+    To create a vehicle from user input and append call to
+    append it to the gsheet (database)
+    Returns user to previous menu once complete
     """
     while True:
         reg = input('\nEnter vehicle registration: ').upper()
@@ -241,7 +259,9 @@ def create_vehicle():
 
 
 def appraisals_menu():
-    """Appraisals sub menu, options to create or view appraisals"""
+    """
+    Appraisals sub menu, options to create or view appraisals
+    """
     am_selection = ''
     while am_selection not in ['1', '2', '3']:
         print('\n')
@@ -317,7 +337,10 @@ def appraisals_menu():
 
 
 def create_appraisal_details():
-    """Function to create an appraisal"""
+    """
+    Function to create an appraisal, takes user input, parses data and returns
+    2 variables, date(string) and appraisal(string)
+    """
     while True:
         date = input('\nWhat is the date of appraisal? (dd/mm/yy): ')
         day, month, year = date.split('/')
@@ -332,7 +355,12 @@ def create_appraisal_details():
 
 
 def validate_app_input(day, month, year):
-    """Data validation for date format input"""
+    """
+    Data validation for date format input
+    @param day(string): parsed date from user input
+    @param month(string): parsed month from user input
+    @param year(string): parsed year from user input
+    """
     try:
         if not datetime.datetime(int(year), int(month), int(day)):
             raise ValueError("Please enter a valid date format")
