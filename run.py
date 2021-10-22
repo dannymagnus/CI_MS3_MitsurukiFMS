@@ -1,7 +1,5 @@
 import datetime
 
-from pprint import pprint
-from sheet1 import a_data
 from sheet1 import c_dict
 from sheet1 import append_car
 from sheet1 import catalogue
@@ -48,7 +46,8 @@ def main_menu():
 def validateselection(selection, choices):
     """
     Tries values to see if they are numbers and within the value range
-    @param selection(int): Selected menu option from user input on what they want to do with the system
+    @param selection(int): Selected menu option from user input on what
+    they want to do with the system
     @param choices(int): Number of menu items that exist in range
     """
     try:
@@ -78,7 +77,7 @@ def vehicle_menu():
         print(divider)
         print(('Vehicle Menu').upper())
         print(divider)
-        print('\nHere you can search vehciles in the current engineering fleet.')
+        print('\nYou can search vehciles in the current engineering fleet.')
         print('You can also add and remove vehicles.')
         print('\n1: Search for a vehicle')
         print('\n2: Add a vehicle')

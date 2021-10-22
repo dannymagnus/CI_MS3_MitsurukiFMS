@@ -19,22 +19,37 @@ dan = "dan"
 
 
 def a_data():
+    """
+    Pull all values from appraisals work sheet and return as list
+    of lists
+    """
     a_data = appraisals.get_all_values()
     return a_data
 
 
 def a_dict():
+    """
+    Pull all values from appraisals work sheet and return as
+    list of dictionaries
+    """
     a_dict = appraisals.get_all_records()
     return a_dict
 
 
 def c_dict():
+    """
+    Pull all values from catalogue work sheet and return as
+    list of dictionaries
+    """
     c_dict = catalogue.get_all_records()
     return c_dict
 
 
 def append_car(worksheet, car):
-    print('append_car() called')
+    """
+    
+    """
+    print('..adding vehicle to the database..')
     """Adds vehicle list to google sheet"""
     worksheet.append_row(car)
     return True
