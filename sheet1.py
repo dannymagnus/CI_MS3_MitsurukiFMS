@@ -47,15 +47,20 @@ def c_dict():
 
 def append_car(worksheet, car):
     """
-    
+    Adds vehicle list to google sheet
+    @param worksheet(object): variable containing gsheet worksheet
+    @param car(list): list with values from vehicle object
     """
     print('..adding vehicle to the database..')
-    """Adds vehicle list to google sheet"""
     worksheet.append_row(car)
     return True
 
 
 def delete_vehicle(reg):
+    """
+    Locates reg values in gsheet (catalogue) and removes the row
+    @param reg(string): car registration as inputted by the user
+    """
     cell = catalogue.find(reg)
     row_number = cell.row
     catalogue.delete_rows(row_number)
@@ -63,11 +68,19 @@ def delete_vehicle(reg):
 
 
 def search(reg, vehicles):
-    """Function to search for vehicle reg in gsheet vehicle catalogue"""
+    """
+    Function to search for vehicle reg in gsheet vehicle catalogue returns a dictionary
+    @param reg(string): Vehicle registration as entered by user input
+    @param vehciles(object): vehicle catalogue worksheet
+    returns list of dictionaries for matching values
+    """
     locatedcar = [x for x in c_dict() if x['Reg'] == reg]
     return locatedcar
 
 
 def appraisals_list():
+    """
+    Gets and returns a list of lists from gsheet
+    """
     appraisals_list = SHEET.worksheet('appraisals')
     return appraisals_list
