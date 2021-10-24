@@ -43,7 +43,7 @@ def main_menu():
             break
 
 
-def validateselection(selection, choices):
+def validateselection(selection: int, choices: int) -> bool:
     """
     Tries values to see if they are numbers and within the value range
     @param selection(int): Selected menu option from user input on what

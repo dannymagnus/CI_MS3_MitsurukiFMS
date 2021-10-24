@@ -69,7 +69,8 @@ def delete_vehicle(reg):
 
 def search(reg, vehicles):
     """
-    Function to search for vehicle reg in gsheet vehicle catalogue returns a dictionary
+    Function to search for vehicle reg in gsheet vehicle catalogue returns a
+    dictionary
     @param reg(string): Vehicle registration as entered by user input
     @param vehciles(object): vehicle catalogue worksheet
     returns list of dictionaries for matching values
