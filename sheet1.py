@@ -18,7 +18,7 @@ appraisals = SHEET.worksheet('appraisals')
 dan = "dan"
 
 
-def a_data():
+def a_data() -> list:
     """
     Pull all values from appraisals work sheet and return as list
     of lists
@@ -27,7 +27,7 @@ def a_data():
     return a_data
 
 
-def a_dict():
+def a_dict() -> list:
     """
     Pull all values from appraisals work sheet and return as
     list of dictionaries
@@ -36,7 +36,7 @@ def a_dict():
     return a_dict
 
 
-def c_dict():
+def c_dict() -> list:
     """
     Pull all values from catalogue work sheet and return as
     list of dictionaries
@@ -45,7 +45,7 @@ def c_dict():
     return c_dict
 
 
-def append_car(worksheet, car):
+def append_car(worksheet, car: list) -> bool:
     """
     Adds vehicle list to google sheet
     @param worksheet(object): variable containing gsheet worksheet
@@ -56,7 +56,7 @@ def append_car(worksheet, car):
     return True
 
 
-def delete_vehicle(reg):
+def delete_vehicle(reg: str):
     """
     Locates reg values in gsheet (catalogue) and removes the row
     @param reg(string): car registration as inputted by the user
@@ -67,7 +67,7 @@ def delete_vehicle(reg):
     print('\nVehicle was successfully deleted.......')
 
 
-def search(reg, vehicles):
+def search(reg: str, vehicles: list) -> list:
     """
     Function to search for vehicle reg in gsheet vehicle catalogue returns a
     dictionary
@@ -75,11 +75,11 @@ def search(reg, vehicles):
     @param vehciles(object): vehicle catalogue worksheet
     returns list of dictionaries for matching values
     """
-    locatedcar = [x for x in c_dict() if x['Reg'] == reg]
+    locatedcar = [x for x in vehicles if x['Reg'] == reg]
     return locatedcar
 
 
-def appraisals_list():
+def appraisals_list() -> list:
     """
     Gets and returns a list of lists from gsheet
     """
