@@ -129,7 +129,7 @@ def vehicle_menu():
             input('\nPress <enter> to try again...')
 
 
-def vehicle_validation(reg, vehicles):
+def vehicle_validation(reg: str, vehicles: object) -> bool:
     """
     Data validation function to check vehicle exists in the database
     and that the character length is valid
@@ -147,7 +147,7 @@ def vehicle_validation(reg, vehicles):
     return True
 
 
-def search_car_reg(reg):
+def search_car_reg(reg: str):
     """
     Function to search car in gsheet vehicle catalogue, uses deconstruct
     function to create vehicle instance and print description
@@ -177,7 +177,7 @@ def search_car_reg(reg):
             print('\nPlease enter a valid choice')
 
 
-def validate_create(reg, model, color, heated):
+def validate_create(reg: str, model: str, color: str, heated: str) -> bool:
     """
     Validates the input from the user that the vehicle is of valid type(s)
     @param reg(string): Vehicle registration as entered by user input
@@ -353,7 +353,7 @@ def create_appraisal_details():
             print('\nPlease try again...')
 
 
-def validate_app_input(day, month, year):
+def validate_app_input(day: str, month: str, year: str):
     """
     Data validation for date format input
     @param day(string): parsed date from user input
