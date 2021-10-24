@@ -353,7 +353,7 @@ def create_appraisal_details():
             print('\nPlease try again...')
 
 
-def validate_app_input(day: str, month: str, year: str):
+def validate_app_input(day: str, month: str, year: str) -> bool:
     """
     Data validation for date format input
     @param day(string): parsed date from user input

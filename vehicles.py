@@ -129,7 +129,7 @@ class Slider(Car):
         print(f"Color: {self.color}")
 
 
-def catalogue_deconstruct(car):
+def catalogue_deconstruct(car: list) -> object:
     """
     Function to take gspread data and conditionallly create vehicle instance,
     used with search_car_reg()
@@ -153,7 +153,7 @@ def catalogue_deconstruct(car):
         return thiscar
 
 
-def create_vehicle_list(obj):
+def create_vehicle_list(obj: object) -> list:
     """
     Function to convert car instance list
     @param obj(object): class instance object vehicle
