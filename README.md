@@ -74,8 +74,7 @@ Below you can see the flowchart, created with [diagrammes.io](www.diagrammes.io)
 
 
 <details><summary>Flowchart</summary>
-<img src=“https://github.com/dannymagnus/CI_MS3_MitsurukiFMS/blob/main/docs/flowcharts/flowchartfms.png“>
-</details>
+<img src="docs/flowcharts/flowchartfms.png"></details>
 
 ### Data models
 
