@@ -309,7 +309,7 @@ The Python code of the each module was validated using [PEP8 Validation Service]
 |-------------|------------|---------------------|-------------------|
 | Find Appraisals Menu      |      Select option 1      | Prompt appears to enter vehicle registration | Works as expected |
 | Enter vehicle registration prompt      |     User enters vehicle reg      |   If vehicle exists user prompted to enter appraisal details OR returns not found | Works as expected |
-| Enter appraisal date and details  |  Prompt displayed to update database. | Works as expected. |
+| Enter appraisal date and details  |  Prompt displayed to update database. |  Confirmation is shown that data has been uploaded  |Works as expected. |
 | Update database prompt  |  Select to update OR cancel. |  Database updated with confirmation OR returns to Appraisal Menu  | Works as expected  |
 
 <details><summary>Screenshots</summary>
