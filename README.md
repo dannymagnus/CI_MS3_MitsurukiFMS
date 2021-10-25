@@ -264,12 +264,12 @@ The Python code of the each module was validated using [PEP8 Validation Service]
 
 <details><summary>run.py</summary>
 <img src="docs/validation/python-validation/validation-runpy.png">
-<details>
+</details>
 
 <details><summary>sheet1.py</summary>
 <img src="docs/validation/python-validation/validation-sheet1.png">
-<details>
+</details>
 
 <details><summary>vehicles.py</summary>
 <img src="docs/validation/python-validation/validation-vehicles.png">
-<details>
+</details>
