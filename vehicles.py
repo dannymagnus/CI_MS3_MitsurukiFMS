@@ -17,8 +17,8 @@ class Car:
         """
         Pulls all appraisals from gsheet which match intance created
         """
-        all_dict_items = [item for item in a_dict() if item['Reg']
-                          == self.registration]
+        all_dict_items = [item for item in a_dict() if item['Reg'] ==
+                          self.registration]
         dates = [item['Date'] for item in all_dict_items]
         appraisals = [item['Appraisal Details'] for item in all_dict_items]
         return dates, appraisals
