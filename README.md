@@ -273,3 +273,91 @@ The Python code of the each module was validated using [PEP8 Validation Service]
 <details><summary>vehicles.py</summary>
 <img src="docs/validation/python-validation/validation-vehicles.png">
 </details>
+
+### Testing user stories
+
+1. As a user I want the option to search vehicles or manage appraisals
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Find main menu       |      Select option 1       | User is presented with Vehicle sub-menu | Works as expected |
+| Find main menu  |   Select option 2   | User is presented with Vehicle Appraisals submenu | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="/docs/testing/user-story-1a.png">
+<img src="/docs/testing/user-story-1b.png">
+</details>
+
+2. As a user, I want to be able to to search for a vehicle so I can assess it’s fitment and type.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Find Vehicle Menu  |   Select option 1   | Displays input reg | Works as expected |
+| Find reg input prompt  |   Enter vehicle registration   | Returns prompt if vehicle exists to display vehicle details OR notifies if reg not found | Works as expected |
+| Print vehicle details prompt  |   Select to display vehicle details   | Displays vehicle description | Works as expected |
+
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-2.png">
+</details>
+
+
+3. As a user I want to be able to add my appraisal details easily.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Find Appraisals Menu      |      Select option 1      | Prompt appears to enter vehicle registration | Works as expected |
+| Enter vehicle registration prompt      |     User enters vehicle reg      |   If vehicle exists user prompted to enter appraisal details OR returns not found | Works as expected |
+| Enter appraisal date and details  |  Prompt displayed to update database. | Works as expected. |
+| Update database prompt  |  Select to update OR cancel. |  Database updated with confirmation OR returns to Appraisal Menu  | Works as expected  |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-3.png">
+</details>
+
+4. As a user I want to be able to add vehicles from each of the models to the vehicle database.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  Find Add Vehicle Menu Option     |      Enter vehicle details  |   Confirmation displayed with prompt to add to database | Works as expected |
+| Update database prompt | Select to update OR cancel | Database updated with confirmation OR return to menu | Works as expected  |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-4.png">
+</details>
+
+5. As a user I want to be able to remove vehicles from the database.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  Find Remove Vehicle Menu Option     |      Enter vehicle registration  |   Confirmation displayed with prompt to remove from database | Works as expected |
+| Update database prompt | Select to update OR cancel | Database updated with confirmation OR return to menu | Works as expected  |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-5.png">
+</details>
+
+6. As a user I want to be able to search and see appraisals submitted by drivers.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Search Appraisal Option    |      Enter vehicle registration and confirm prompt if vehicle is located   |  User is presented with all appraisal data for the vehicle selected  | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-6.png">
+</details>
+
+7. As a user I want to be informed if any of my choices are not valid.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Vehicle Reg length Validation     |      Enter incorrect reg length     |  Error message displayed with reason and resubmit | Works as expected |
+| Menu option validation  |  Enter menu option not within range or non numeric.  |  Error message displayed with reason and resubmit | Works as expected |
+| Date validation  |  Enter date incorrect format |  Error message displayed with reason and resubmit | Works as expected |
+| Vehicle Reg Validation (not for Add Vehicle Menu option)    |      Enter vehicle registration not contained within Google Sheet     |  Vehicle not found displayed | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-7.png">
+</details>
+
+8. As a user I want feedback that my choices and actions have been acknowledged and executed.
