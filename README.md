@@ -313,7 +313,9 @@ The Python code of the each module was validated using [PEP8 Validation Service]
 | Update database prompt  |  Select to update OR cancel. |  Database updated with confirmation OR returns to Appraisal Menu  | Works as expected  |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-3.png">
+<img src="docs/testing/user-story-3a.png">
+<img src="docs/testing/user-story-3b.png">
+<img src="docs/testing/user-story-3c.png">
 </details>
 
 4. As a user I want to be able to add vehicles from each of the models to the vehicle database.
@@ -324,7 +326,8 @@ The Python code of the each module was validated using [PEP8 Validation Service]
 | Update database prompt | Select to update OR cancel | Database updated with confirmation OR return to menu | Works as expected  |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-4.png">
+<img src="docs/testing/user-story-4a.png">
+<img src="docs/testing/user-story-4b.png">
 </details>
 
 5. As a user I want to be able to remove vehicles from the database.

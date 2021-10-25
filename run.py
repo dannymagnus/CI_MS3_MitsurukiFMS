@@ -346,7 +346,7 @@ def create_appraisal_details():
         appraisal = input('\nPlease enter the vehicle appraisal: ')
         if validate_app_input(day, month, year):
             return date, appraisal
-        elif input('\n"Would you like to try again (y/n)?') == 'n':
+        elif input('\nWould you like to try again (y/n)?') == 'n':
             print('\nReturning to appraisals menu....)')
             appraisals_menu()
         else:
