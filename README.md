@@ -298,7 +298,11 @@ The Python code of the each module was validated using [PEP8 Validation Service]
 
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-2.png">
+<img src="docs/testing/user-story-2a.png">
+</details>
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-2b.png">
 </details>
 
 
