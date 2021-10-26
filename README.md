@@ -100,7 +100,6 @@ VSCode was the IDE used to write the remainder of the project code.
 ## Features
 
 ### Main Menu
-![Main Menu](docs/features/feature-main-menu.png)
 
 The main menu gives a paragraph welcome and introduction to the Fleet Management System.  It presents the user with 2 options for the Vehicle Catalogue and the Appraisal Menu respectively.
 
