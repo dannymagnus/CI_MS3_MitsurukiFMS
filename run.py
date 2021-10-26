@@ -97,7 +97,7 @@ def vehicle_menu():
                 if vehicle_validation(reg, c_dict()):
                     search_car_reg(reg)
                 elif reg == '':
-                    print('\nReturning to vehicle menu....)')
+                    print('\nReturning to vehicle menu....')
                     vehicle_menu()
                 else:
                     print('\nPlease check the registration and try again...')
