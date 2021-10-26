@@ -123,6 +123,8 @@ def vehicle_menu():
                     else:
                         print('\nVehicle not deleted...')
                         input('\nPress <enter> to return to vehicle menu')
+                        vehicle_menu()
+                        break
         elif vm_selection == '4':
             main_menu()
         else:

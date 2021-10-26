@@ -338,7 +338,8 @@ The Python code of the each module was validated using [PEP8 Validation Service]
 | Update database prompt | Select to update OR cancel | Database updated with confirmation OR return to menu | Works as expected  |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-5.png">
+<img src="docs/testing/user-story-5a.png">
+<img src="docs/testing/user-story-5b.png">
 </details>
 
 6. As a user I want to be able to search and see appraisals submitted by drivers.
