@@ -87,10 +87,8 @@ I have used classes for the vehicle lines as some have fitments that others donâ
 - [Python 3](https://www.python.org/)
 
 ### Frameworks & Tools
-1. [Git](https://git-scm.com/)
-- Git was used for version control within VSCode to push the code to GitHub.
-2. [GitHub](https://github.com/)
-- GitHub was used as a remote repository to store project code. 
+1. [Git](https://git-scm.com/) - Git was used for version control within VSCode to push the code to GitHub.
+2. [GitHub](https://github.com/) - GitHub was used as a remote repository to store project code. 
 3. [Visual Studio Code (VSCode)](https://code.visualstudio.com/)
 VSCode was the IDE used to write the remainder of the project code.
 4. [Diagrams.net](https://app.diagrams.net/) - was used to draw flowchart.
