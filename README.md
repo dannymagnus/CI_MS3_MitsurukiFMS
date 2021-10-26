@@ -18,7 +18,7 @@
     2. [Data Models](#data-models)   
 4. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
-    2. [Frameworks & Tools](#frameworks-&-tools)
+    2. [Frameworks and Tools](#frameworks-and-tools)
 5. [Features](#features)
 6. [Testing](#validation)
     1. [Python Validation](#Python-validation)
@@ -84,9 +84,11 @@ I have used classes for the vehicle lines as some have fitments that others donâ
 ## Technologies Used
 
 ### Languages
+
 - [Python 3](https://www.python.org/)
 
-### Frameworks & Tools
+### Frameworks and Tools
+
 1. [Git](https://git-scm.com/) - Git was used for version control within VSCode to push the code to GitHub.
 2. [GitHub](https://github.com/) - GitHub was used as a remote repository to store project code. 
 3. [Visual Studio Code (VSCode)](https://code.visualstudio.com/)
