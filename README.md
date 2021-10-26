@@ -409,6 +409,17 @@ The Python code of the each module was validated using [PEP8 Validation Service]
 
 12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.
 
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Vehicle Reg length Validation     |      Enter incorrect reg length     |  Error message displayed with reason and resubmit | Works as expected |
+| Menu option validation  |  Enter menu option not within range or non numeric.  |  Error message displayed with reason and resubmit | Works as expected |
+| Date validation  |  Enter date incorrect format |  Error message displayed with reason and resubmit | Works as expected |
+| Vehicle Reg Validation (not for Add Vehicle Menu option)    |      Enter vehicle registration not contained within Google Sheet     |  Vehicle not found displayed | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-7.png">
+</details>
+
 ## Deployment
 
 ### Heroku
