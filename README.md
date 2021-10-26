@@ -397,6 +397,18 @@ The Python code of the each module was validated using [PEP8 Validation Service]
 <img src="docs/testing/user-story-10b.png">
 </details>
 
+11. As a site owner; I want users to be able to submit appraisals which are to be stored in a separate worksheet in the google sheet.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Find Appraisal Menu  |   Submit appraisals  | Google sheet is updated with appraisal details | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-11.png">
+</details>
+
+12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.
+
 ## Deployment
 
 ### Heroku
