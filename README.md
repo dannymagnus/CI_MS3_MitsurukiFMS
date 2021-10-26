@@ -366,3 +366,62 @@ The Python code of the each module was validated using [PEP8 Validation Service]
 </details>
 
 8. As a user I want feedback that my choices and actions have been acknowledged and executed.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|    Find menu options   |      Select menu options   |  User recieves acknowledgement from system  |  Works as expected  | Find vehicle input  |  Input vehicle details  |  User gets acknowledgement from system  |  Works as expected  |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-8a.png">
+<img src="docs/testing/user-story-8b.png">
+</details>
+
+
+## Deployment
+
+### Heroku
+
+This application has been deployed from Github using Heroku. Here's how:
+
+1. Create an account at heroku.com
+2. Create a new app, add app name and your region
+3. Click on create app
+4. Go to "Settings"
+5. Under Config Vars, add your sensitive data (creds.json for example)
+6. For this project, I set buildpacks to and in that order.
+7. Go to "Deploy" and at "Deployment method", click on "Connect to Github"
+8. Enter your repository name and click on it when it shows below
+9. Choose the branch you want to buid your app from
+10. If desired, click on "Enable Automatic Deploys", which keeps the app up to date with your Github repository
+
+### Forking the GitHub Repository 
+
+By forking this GitHub repository you are making a copy of the original to view or make changes without affecting the original. You can do this by following these steps...
+
+1. Log into your GitHub account and find the [repository](https://github.com/dannymagnus/CI_MS3_MitsurukiFMS).
+2. Click 'Fork' (last button on the top right of the repository page).
+3. You will then have a copy of the repository in your own GitHub account. 
+
+### Making a Local Clone
+
+1. Log into your GitHub account and find the [repository](https://github.com/dannymagnus/CI_MS3_MitsurukiFMS).
+2. Click on the 'Code' button (next to 'Add file'). 
+3. To clone the repository using HTTPS, under clone with HTTPS, copy the link.
+4. Then open Git Bash.
+5. Change the current working directory to where you want the cloned directory to be made.
+6. In your IDE's terminal type 'git clone' followed by the URL you copied.
+7. Press Enter. 
+8. Your local clone will now be made.
+
+## Credits
+
+### Code
+
+- **Code Institute** - for git template IDE and heroku deployment instructions.
+- **Google** - for library [gspread](https://docs.gspread.org/en/latest/) and [APIS](https://developers.google.com/sheets/api)
+- With the exception of the above, all code was written raw and occasional reference to W3C schools for classes. No code has been borrowed from other sources.
+
+### Acknowledgements: 
+
+- To my mentor Mo Shami for his invaluable guidance and direction.
+- To the Code Institute online resources
