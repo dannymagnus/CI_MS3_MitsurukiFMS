@@ -72,7 +72,6 @@
 
 Below you can see the flowchart, created with [diagrammes.io](www.diagrammes.io)
 
-
 <details><summary>Flowchart</summary>
 <img src="docs/flowcharts/flowchartfms.png"></details>
 
@@ -296,12 +295,10 @@ The Python code of the each module was validated using [PEP8 Validation Service]
 | Find reg input prompt  |   Enter vehicle registration   | Returns prompt if vehicle exists to display vehicle details OR notifies if reg not found | Works as expected |
 | Print vehicle details prompt  |   Select to display vehicle details   | Displays vehicle description | Works as expected |
 
-
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user-story-2a.png">
 <img src="docs/testing/user-story-2b.png">
 </details>
-
 
 3. As a user I want to be able to add my appraisal details easily.
 
@@ -376,6 +373,29 @@ The Python code of the each module was validated using [PEP8 Validation Service]
 <img src="docs/testing/user-story-8b.png">
 </details>
 
+9. As a site owner, I want the user to be able to select a vehicle from the engineering fleet catalogue.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Find Vehicle Menu  |   Select option 1   | Displays input reg | Works as expected |
+| Find reg input prompt  |   Enter vehicle registration   | Returns prompt if vehicle exists to display vehicle details OR notifies if reg not found | Works as expected |
+| Print vehicle details prompt  |   Select to display vehicle details   | Displays vehicle description | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-2a.png">
+<img src="docs/testing/user-story-2b.png">
+</details>
+
+10. As a site owner, I want the fleet details to be synced to and from a google sheet.
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Find Vehicle Menu  |   Add vehicle and confirm to add  | Google sheet is updated with vehcile details | Works as expected |
+| Find Vehicle Menu  |   Remove vehicle and confirm to delete  | Google sheet is updated with vehcile details | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-10a.png">
+<img src="docs/testing/user-story-10b.png">
+</details>
 
 ## Deployment
 
