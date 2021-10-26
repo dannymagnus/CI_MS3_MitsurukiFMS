@@ -158,8 +158,13 @@ def search_car_reg(reg: str):
     locatedcar = [x for x in c_dict() if x['Reg'] == reg]
     print("\nThe car has been located........")
     while True:
-        option = input("\nWould you like to view vehicle specification?: ")
-        choice = option[0].upper()
+        while True:
+            option = input("\nWould you like to view vehicle specification?: ")
+            if option == '':
+                print('\nPlease enter y or n only')
+            else:
+                choice = option[0].upper()
+                break
         if choice == "Y":
             car_details = catalogue_deconstruct(locatedcar)
             print('\n')
@@ -176,7 +181,7 @@ def search_car_reg(reg: str):
             vehicle_menu()
             break
         else:
-            print('\nPlease enter a valid choice')
+            print('\nPlease enter y or n only')
 
 
 def validate_create(reg: str, model: str, color: str, heated: str) -> bool:

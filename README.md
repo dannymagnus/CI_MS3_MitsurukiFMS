@@ -105,7 +105,7 @@ VSCode was the IDE used to write the remainder of the project code.
 The main menu gives a paragraph welcome and introduction to the Fleet Management System.  It presents the user with 2 options for the Vehicle Catalogue and the Appraisal Menu respectively.
 
 <details><summary>Main Menu</summary>
-<img src=“docs/features/main-menu“>
+<img src=“docs/features/main-menu.png“>
 </details>
 
 **This screen covers the following user stories:**
@@ -117,7 +117,7 @@ The main menu gives a paragraph welcome and introduction to the Fleet Management
 The vehicle menu gives the user 3 options where they can search and retrieve vehicle information from a registration giving a description of the vehicle including it’s model type, and fitment of luxury items, in particular in this release, whether heated and/or massage seats are fitted.
 
 <details><summary>Vehicle Menu</summary>
-<img src=“docs/features/vehicle-menu“>
+<img src=“docs/features/vehicle-menu.png“>
 </details>
 
 **This screen covers the following user stories:**
@@ -137,7 +137,7 @@ The vehicle menu gives the user 3 options where they can search and retrieve veh
 This give the user the function of searching the fleet database by registration to return the full vehicle description including any special fitment such as heated or massage seats, so the user can assess the vehicle before booking for an appraisal.  This can also be used by engineers to find the spec of the vehicle after an appraisal.  This function will search vehicles on record and return an error if no such vehicle exists.  It will also validate data entry to a degree (eg. Reg length etc).  It does rely to a degree that the user is in earnest trying to complete entry successfully.  Once located, a prompt will be given to ask if the user wishes to display the data.
 
 <details><summary>Search Vehicle</summary>
-<img src=“docs/features/search-vehicle“>
+<img src=“docs/features/search-vehicle.png“>
 </details>
 
 **This screen covers the following user stories:**
@@ -159,7 +159,7 @@ This give the user the function of searching the fleet database by registration 
 This give the user the function of adding a vehicle to the fleet database.  The user will be prompted for the key values, registration, model, colour and fitments. If data validation is successful then the user has the option to add the vehicle.
 
 <details><summary>Add vehicle</summary>
-<img src=“docs/features/add-vehicle“>
+<img src=“docs/features/add-vehicle.png“>
 </details>
 
 **This screen covers the following user stories:**
@@ -181,7 +181,7 @@ This give the user the function of adding a vehicle to the fleet database.  The 
 This gives the user the function of removing a vehicle from the fleet database.  The user will be prompted for the key values, registration. If data validation is successful and the vehicle exist in the database, and the user confirms the prompt then the vehicle will be removed.
 
 <details><summary>Remove vehicle</summary>
-<img src=“docs/features/remove-vehicle“>
+<img src=“docs/features/remove-vehicle.png“>
 </details>
 
 **This screen covers the following user stories:**
@@ -203,7 +203,7 @@ This gives the user the function of removing a vehicle from the fleet database. 
 The appraisal menu gives the user 2 options where they can add and search vehicle appraisals.  Drivers/users can submit their experience as an appraisal and then engineers and fleet/vehicle owners can review the data provided and raise issues for engineers to investigate.
 
 <details><summary>Appraisal Menu</summary>
-<img src=“docs/features/appraisal-menu“>
+<img src=“docs/features/appraisal-menu.png“>
 </details>
 
 **This screen covers the following user stories:**
@@ -223,7 +223,7 @@ The appraisal menu gives the user 2 options where they can add and search vehicl
 This give the user the function of adding an appraisal report to the FMS database(google sheet). The user is prompted to enter vehicle registration, and if vehicle exists, date and then the appraisal details.  The user will then have the option to add this report to the database.
 
 <details><summary>Add appraisal</summary>
-<img src=“docs/features/add-appraisal“>
+<img src=“docs/features/add-appraisal.png“>
 </details>
 
 **This screen covers the following user stories:**
@@ -243,7 +243,7 @@ This give the user the function of adding an appraisal report to the FMS databas
 This give the user the function of searching an appraisal report to the FMS database(google sheet). The user is prompted to enter vehicle registration, and if vehicle exists the user will issued a prompt which allows them to display all of the appraisals linked to that vehicle.
 
 <details><summary>Search appraisal</summary>
-<img src=“docs/features/search-appraisal“>
+<img src=“docs/features/search-appraisal.png“>
 </details>
 
 **This screen covers the following user stories:**
@@ -419,6 +419,16 @@ The Python code of the each module was validated using [PEP8 Validation Service]
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user-story-7.png">
 </details>
+
+## Bugs
+
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+| 'Vehicle catalogue' not updating with additions or removals until programme termination and re-run |   Changed variable from being called at start of module to being a function   |
+| 'Vehicle Appraisals' not updating with additions until programme termination and re-run | Changed variable from being called at start of module to being a function |
+| Class inheritance failed | Correct use of super init | 
+| On confirmation question for print vehicle details, no value caused traceback error  |  Added while loop to check for invalid entry  |
+| Adding while loop on above caused infinate loop  |  Moved input field to interrupt  |
 
 ## Deployment
 
