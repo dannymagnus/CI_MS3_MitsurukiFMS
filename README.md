@@ -154,10 +154,11 @@ Below you can see the flowchart, created with [diagrammes.io](www.diagrammes.io)
 
 ### Data models
 
-For this project I have used largely lists, dictionaries and 4 classes for the vehicle lines themselves.
-- Classes - I have used 5 classes. One parent class of car, from which the subsequent classes inherit base values and 4 subclasses for each of the vehicle models; Slicker, Slider, ETronic and Trojan.   Each have some similar attibutes which are determined by the user and some unique attributes eg type (estate, pickup etc).
-- Google sheets API.  I have chosen to use Google Sheets API so that the required data for the app will persist outside of the container.
-- As the programme is working closely with Google Sheets, I have used lists and dictionaries.  List to work with adding data to the google sheet and dictionaries to search for objects within the sheets.
+For this project I have used object oriented programming and centred the application to use and manipulate the folowing:
+- Classes - I have used 5 classes. One parent class of car, from which the subsequent classes inherit base values from and then 4 subclasses for each of the vehicle models; Slicker, Slider, ETronic and Trojan.   Each have some similar attibutes which are determined by the user and some unique attributes eg type (estate, pickup etc).
+- Lists and dictionaries - I have used lists for the appraisal data so that I can collate all stored data against a specific object and pass through class functions.  Dictionaries have been used for list comprehension when searching for matches in the sheets.
+- Google sheets API.  JUSTIFICATION: I have chosen to use Google Sheets API so that the required data for the app will persist outside of the container.
+
 
 ## Technologies Used
 
@@ -178,7 +179,9 @@ VSCode was the IDE used to write the remainder of the project code.
 #### Libraries
 
 1. datetime - for date format validation and ensuring user input is not in the future.
-2. gspread - used to manipulate google sheets from the python client.
+
+### 3rd Party Libraries
+1. gspread - JUSTIFICATION:  As efforts to find a native python library to access, add, manipulate and remove data from googlesheets and to interact with the google API do not seem to exist I have chosen to use the gspread library for these functions.
 
 ## Features
 
