@@ -242,6 +242,7 @@ This give the user the function of adding a vehicle to the fleet database.  The 
 
 <details><summary>Add vehicle</summary>
 <img src="docs/features/add-vehicle.png">
+<img src="docs/features/add-vehicle-sheet.png">
 </details>
 
 **This screen covers the following user stories:**
