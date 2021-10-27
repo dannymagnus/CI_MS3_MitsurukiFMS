@@ -507,6 +507,7 @@ The Python code of the each module was validated using [PEP8 Validation Service]
 | Class inheritance failed | Correct use of super init | 
 | On confirmation question for print vehicle details, no value caused traceback error  |  Added while loop to check for invalid entry  |
 | Adding while loop on above caused infinate loop  |  Moved input field to interrupt  |
+| Date validation failed when nonsence format added  |  Changed date validation to use datetime.strftime and datetime.strptime  |
 
 ## Deployment
 
