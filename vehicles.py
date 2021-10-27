@@ -64,7 +64,9 @@ class Trojan(Car):
     """
     Creates an instance of 'Trojan' vehicle object
     """
-    def __init__(self, registration: str, color: str, heated: str, massage: str):
+    def __init__(
+        self, registration: str, color: str, heated: str, massage: str
+            ):
         """
         Initialisation function for the Trojan class
         """
@@ -88,7 +90,9 @@ class Slicker(Car):
     """
     Creates an instance of 'Slicker' vehicle object
     """
-    def __init__(self, registration: str, color: str, heated: str, massage: str):
+    def __init__(
+        self, registration: str, color: str, heated: str, massage: str
+            ):
         """
         Initialisation function for Slicker class
         @param registration(string): Registration as entered by user input
