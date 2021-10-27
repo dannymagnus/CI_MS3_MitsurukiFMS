@@ -5,7 +5,7 @@
 
 [View live site](https://mitsuruki-fms.herokuapp.com/)
 
-## Table of Content
+## Table of Contents
 
 1. [Project Goals](#project-goals)
     1. [User Goals](#user-goals)
