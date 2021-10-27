@@ -252,7 +252,9 @@ def create_vehicle():
     print('\nYou have inputted the following details...')
     (vehicle.description())
     while True:
-        choice = input('\nWould you like to add this to the fleet database?:  ')
+        choice = input(
+            '\nWould you like to add this to the fleet database?:  '
+            )
         if choice == '':
             print('\nPlease enter and valid choice (y) or (n)')
         elif choice.capitalize()[0] not in ['Y', 'N']:
