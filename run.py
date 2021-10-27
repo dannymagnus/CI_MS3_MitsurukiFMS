@@ -60,7 +60,7 @@ def validateselection(selection: int, choices: int) -> bool:
                 "Please use a number within range"
                 )
     except ValueError as e:
-        print(f"Invalid selection: {e}")
+        print(f"\nInvalid selection: {e}")
         input('Press <enter> to continue')
         return False
     return True
@@ -193,6 +193,8 @@ def validate_create(reg: str, model: str, color: str, heated: str) -> bool:
     @param heated(string): Vehicle heated (y/n) as entered by user input
     """
     try:
+        if [element for element in c_dict() if element['Reg'] == reg]:
+            raise ValueError("Vehicle registration already exists.")
         if not len(reg) == 7:
             raise ValueError(
                 "Registration character length should be 7")
@@ -203,7 +205,7 @@ def validate_create(reg: str, model: str, color: str, heated: str) -> bool:
         if heated.upper() not in ['Y', 'N']:
             raise ValueError("Please enter the letters Y or N only")
     except ValueError as e:
-        print(f"Invalid selection: {e}.  Please try again..")
+        print(f"\nInvalid selection: {e}.")
         return False
     return True
 
@@ -215,17 +217,22 @@ def create_vehicle():
     Returns user to previous menu once complete
     """
     while True:
-        reg = input('\nEnter vehicle registration: ').upper()
-        model = input('Model: ').capitalize()
-        color = input('Color: ').capitalize()
-        heated = input('Are heated seats fitted?(y/n): ').capitalize()
+        reg = input(
+            '\nEnter vehicle registration or <enter> to exit: '
+            ).upper()
+        if reg == '':
+            vehicle_menu()
+            break
+        model = input('\nModel: ').capitalize()
+        color = input('\nColor: ').capitalize()
+        heated = input('\nAre heated seats fitted?(y/n): ').capitalize()
         massage = ""
         if validate_create(reg, model, color, heated):
             model = model.capitalize()
             if model == 'Trojan' or model == 'Slicker' or model == 'Slider':
                 while True:
                     massage = (
-                        input('Are massage seats fitted? (y/n): ').upper()
+                        input('\nAre massage seats fitted? (y/n): ').upper()
                         )
                     if massage in ['Y', 'N']:
                         break
@@ -241,27 +248,35 @@ def create_vehicle():
                 vehicle = ETronic(reg, color, heated)
             break
         else:
-            print("The data inputted is invalid")
+            print("\nPlease try again...")
     print('\nYou have inputted the following details...')
-    print(vehicle.description())
-    choice = input('Would you like to add this to the fleet database?:  ')
-    if choice.capitalize()[0] == 'Y':
-        car_list = create_vehicle_list(vehicle)
-        if append_car(catalogue, car_list):
-            print('\nVehicle successfully added...')
-            print('\nReturning to the vehicle menu...')
-            input('Press <enter> to continue...')
-            vehicle_menu()
+    (vehicle.description())
+    while True:
+        choice = input('\nWould you like to add this to the fleet database?:  ')
+        if choice == '':
+            print('\nPlease enter and valid choice (y) or (n)')
+        elif choice.capitalize()[0] not in ['Y', 'N']:
+            print('\nPlease enter and valid choice (y) or (n)')
+        elif choice.capitalize()[0] == 'Y':
+            car_list = create_vehicle_list(vehicle)
+            if append_car(catalogue, car_list):
+                print('\nVehicle successfully added...')
+                print('\nReturning to the vehicle menu...')
+                input('\nPress <enter> to continue...')
+                vehicle_menu()
+                break
+            else:
+                print("\nSorry an error has occurred")
+                print("\nPlease try again later")
+                input('\nPress <enter> to continue...')
+                vehicle_menu()
+                break
         else:
-            print("Sorry an error has occurred")
-            print("Please try again later")
-            input('Press <enter> to continue...')
+            print('\nYour choice was to not add to the vehicle database')
+            print('\nReturning to the vehicle menu.....')
+            input('\nPress <enter> to continue....')
             vehicle_menu()
-    else:
-        print('\nYour choice was to not add to the vehicle database')
-        print('\nReturning to the vehicle menu.....')
-        input('Press <enter> to continue....')
-        vehicle_menu()
+            break
 
 
 def appraisals_menu():
@@ -281,7 +296,7 @@ def appraisals_menu():
         am_selection = input('\nWhat do you want to do?: ')
         if am_selection not in ['1', '2', '3', '4']:
             print('\nPlease select a valid option (1), (2), (3) or (4)')
-            input('Press enter to continue')
+            input('\nPress <enter> to continue')
         else:
             print('\nLoading your choice')
         if am_selection == '1':
@@ -308,11 +323,11 @@ def appraisals_menu():
                             append_car(appraisals_list(), car_list_values)
                             print('\nAdded to appraisals database')
                             print('\nReturning to appraisals menu,')
-                            input('\nPress enter to continue....')
+                            input('\nPress <enter> to continue....')
                             appraisals_menu()
                         else:
-                            print('That is not a valid selection.')
-                            print('Please enter y or n only')
+                            print('\nThat is not a valid selection.')
+                            print('\nPlease enter y or n only')
                 elif input('\n"Would you like to try again (y/n)?') == 'n':
                     print('\nReturning to appraisals menu....)')
                     appraisals_menu()
@@ -369,9 +384,9 @@ def validate_app_input(day: str, month: str, year: str) -> bool:
     """
     try:
         if not datetime.datetime(int(year), int(month), int(day)):
-            raise ValueError("Please enter a valid date format")
+            raise ValueError("\nPlease enter a valid date format")
     except ValueError as e:
-        print(f'Entry invalid: {e}')
+        print(f'\nEntry invalid: {e}')
         return False
     return True
 
