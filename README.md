@@ -189,7 +189,7 @@ VSCode was the IDE used to write the remainder of the project code.
 1. datetime - for date format validation and ensuring user input is not in the future.
 
 ### 3rd Party Libraries
-1. [gspread])(https://docs.gspread.org/en/latest/) - JUSTIFICATION:  As efforts to find a native python library to access, add, manipulate and remove data from googlesheets and to interact with the google API do not seem to exist I have chosen to use the gspread library for these functions.
+1. [gspread](https://docs.gspread.org/en/latest/) - JUSTIFICATION:  As efforts to find a native python library to access, add, manipulate and remove data from googlesheets and to interact with the google API do not seem to exist I have chosen to use the gspread library for these functions.
 
 ## Features
 
