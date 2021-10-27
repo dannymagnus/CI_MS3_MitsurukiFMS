@@ -44,8 +44,8 @@ def login():
         main_menu()
     else:
         print('\nLogin failed')
-        print('\n Password did not match.')
-        print('\n Please try again.')
+        print('\nPassword did not match.')
+        print('\nPlease try again.')
         login()
 
 
