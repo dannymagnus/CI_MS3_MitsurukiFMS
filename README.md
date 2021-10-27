@@ -13,6 +13,7 @@
 2. [User Experience](#user-experience)
     1. [Target Audience](#target-audience)
     2. [User Stories](#user-stories)
+    3. [Instructions](#instructions)
 3. [Technical Design](#technical-design)
     1. [Flowchart](#flowchart)
     2. [Data Models](#data-models)   
@@ -66,6 +67,57 @@
 11. As a site owner; I want users to be able to submit appraisals which are to be stored in a separate worksheet in the google sheet.
 12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.
 
+### Instructions
+
+#### Overview
+
+The Mitsuruki FMS (Fleet Management System) is for the management of a collection of vehicles within the Mitsuruki car product engineering and testing team.  It's purpose is to provide an easy way for drivers to provide vehicle assessments for the engineering team to review prior to investigation of any reported issues.  This is to better develop our products before releasing them to market.
+
+#### Main Menu
+
+On the main menu, you will be provdided with 2 options.
+
+Operation: Input numeric value and press enter key.
+
+1: The vehicle menu - this contains all of the vehicles that are held for test by the engineering fleet.  The purpose of this sub menu structure is for users to be able to interogate a particular registration for feature fitments (eg. heated seats), should that be required for a particular testing usecase.
+
+It is also for fleet owners to be able to add and remove vehicles from the database once they are de-fleeted or replaced.
+
+2: The appraisal menu option.  This directs users to a submenu where users can submit results of a vehicle assesment and engineers can review them.
+
+#### Vehicle Menu
+
+Purpose: To allow users to search a vehicle by registration, add or remove a vehicle to or from the catalogue.
+
+Operation: Input numeric value and press enter key
+
+1: Search the vehicle by registration.
+
+Enter Vehicle Registration: Enter a valid registration (eg VE70EKU).  Registration is not case sensitive but should be of the correct length and format.  Validation exists to prompt for errors in length, but format needs to be the diligence of the user.
+
+2: Add vehicle: Enter details as prompted on screen 
+
+- Enter Vehicle Registration: Enter a valid registration (eg VE70EKU).  Registration is not case sensitive but should be of the correct length and format.  Validation exists to prompt for errors in length, but format needs to be the diligence of the user.
+
+- Enter Model: Valid model types are Slicker, Slider, Trojan, ETronic.
+
+- Enter Colour: There are no pre-determined colour types.  Please be mindful that the colour is correct as per the manufacturer datasheet (not included here) as this maybe a search function later in time.
+
+- Heated (y/n):  Enter using y or n only.  This option is to indicate whether heated seats are fitted or not.
+
+- Massage (y/n): Enter using y or n only. This option is to indicate whether massage seats are fitted.  For ETronic models this option is not available.
+
+- Confirmation of addition to database (y/n): Confirm whether to be upload to the fleet catalogue.  Confirmation will be displayed if upload is successful.
+
+3: Remove vehicle: Enter details as prompted on screen.
+
+- Enter Vehicle Registration: Enter a valid registration (eg VE70EKU).  Registration is not case sensitive but should be of the correct length and format.  Validation exists to prompt for errors in length, but format needs to be the diligence of the user.
+
+- Vehicle catalogue will be searched. If such a registration exists, then a confirmation prompt will follow.
+
+-Confirmation (y/n): Confirmation to remove from catalogue.  IMPORTANT! This action is detructive and cannot be reversed.  Please be sure this is the desired action.
+
+4: Return to main menu: Returns user to main menu.
 ## Technical Design
 
 ### Flow Chart
