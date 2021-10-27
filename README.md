@@ -189,8 +189,7 @@ The main menu gives a paragraph welcome and introduction to the Fleet Management
 The vehicle menu gives the user 3 options where they can search and retrieve vehicle information from a registration giving a description of the vehicle including it’s model type, and fitment of luxury items, in particular in this release, whether heated and/or massage seats are fitted.
 
 <details><summary>Vehicle Menu</summary>
-<img src=“docs/features/vehicle-menu.png“>
-</details>
+<img src=“docs/features/vehicle-menu.png“></details>
 
 **This screen covers the following user stories:**
 
