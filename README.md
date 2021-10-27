@@ -13,7 +13,7 @@
 2. [User Experience](#user-experience)
     1. [Target Audience](#target-audience)
     2. [User Stories](#user-stories)
-    3. [Instructions](#instructions)
+    3. [User Manual](#user-manual)
 3. [Technical Design](#technical-design)
     1. [Flowchart](#flowchart)
     2. [Data Models](#data-models)   
@@ -67,7 +67,7 @@
 11. As a site owner; I want users to be able to submit appraisals which are to be stored in a separate worksheet in the google sheet.
 12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.
 
-### Instructions
+### User Manual
 
 <details><summary>Click Here for instructions for use</summary>
 
