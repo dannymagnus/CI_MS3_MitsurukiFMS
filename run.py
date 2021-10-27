@@ -371,7 +371,7 @@ def appraisals_menu():
                         else:
                             print('\nThat is not a valid selection.')
                             print('\nPlease enter y or n only')
-                elif input('\n"Would you like to try again (y/n)?\n') == 'n':
+                elif input('\nWould you like to try again (y/n)?\n') == 'n':
                     print('\nReturning to appraisals menu....)')
                     appraisals_menu()
                 else:
