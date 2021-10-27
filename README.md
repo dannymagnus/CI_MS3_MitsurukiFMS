@@ -118,6 +118,27 @@ Enter Vehicle Registration: Enter a valid registration (eg VE70EKU).  Registrati
 -Confirmation (y/n): Confirmation to remove from catalogue.  IMPORTANT! This action is detructive and cannot be reversed.  Please be sure this is the desired action.
 
 4: Return to main menu: Returns user to main menu.
+
+#### Appraisal Menu
+
+1: Add appraisal: Enter details as promped on screen.
+
+- Enter Vehicle Registration: Enter a valid registration (eg VE70EKU).  Registration is not case sensitive but should be of the correct length and format.  Validation exists to prompt for errors in length, but format needs to be the diligence of the user.
+
+- Enter date of appraisal: This should be the date that the appraisal took place.  Correct format should be dd/mm/yy.
+
+- Enter appraisal details: This should be as descriptive as possible of the issues witnessed.  Please reference symptoms only, and do not assume root cause.  e.g. No navigation maps displayed in main instrument panel, rather than navigation didn't work or navigation crashed.  Please include the time stamp of the issue e.g.(1523).
+
+- Confirmation of upload: Confirm using (y or n) to upload appraisal to the database.
+
+2: Search appraisal: Enter details as prompted on screen.
+
+- Enter Vehicle Registration: Enter a valid registration (eg VE70EKU).  Registration is not case sensitive but should be of the correct length and format.  Validation exists to prompt for errors in length, but format needs to be the diligence of the user.
+
+- Confirmation: if the vehicle exists, then a confirmation will be presented.  Pressing enter will display all appraisals for that vehicle.
+
+3: Main Menu: This returns the user to the main menu.
+
 ## Technical Design
 
 ### Flow Chart
