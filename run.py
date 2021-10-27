@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 
 from sheet1 import c_dict
 from sheet1 import append_car
@@ -303,7 +303,8 @@ def appraisals_menu():
             print('\nLoading your choice')
         if am_selection == '1':
             while True:
-                reg = input('\nPlease enter the vehicle registration: ')
+                reg_input = input('\nPlease enter the vehicle registration: ')
+                reg = reg_input.upper()
                 if vehicle_validation(reg, c_dict()):
                     print('\n Your vehicle has been located...\n')
                     car = search(reg, c_dict())[0]
@@ -366,29 +367,33 @@ def create_appraisal_details():
     """
     while True:
         date = input('\nWhat is the date of appraisal? (dd/mm/yy): ')
-        day, month, year = date.split('/')
-        appraisal = input('\nPlease enter the vehicle appraisal: ')
-        if validate_app_input(day, month, year):
+        if validate_date_type(date):
+            appraisal = input('\nPlease enter the vehicle appraisal: ')
             return date, appraisal
-        elif input('\nWould you like to try again (y/n)?') == 'n':
+        elif input('\nWould you like to try again (y/n)?: ') == 'n':
             print('\nReturning to appraisals menu....)')
             appraisals_menu()
         else:
             print('\nPlease try again...')
 
 
-def validate_app_input(day: str, month: str, year: str) -> bool:
+def validate_date_type(date_input: str) -> bool:
     """
-    Data validation for date format input
-    @param day(string): parsed date from user input
-    @param month(string): parsed month from user input
-    @param year(string): parsed year from user input
+    Validates if date can be split by '/'
+    @param date(str): date entered by user
     """
+    date_today_grab = datetime.today().strftime('%d/%m/%y')
+    date_today = datetime.strptime(date_today_grab, '%d/%m/%y')
     try:
-        if not datetime.datetime(int(year), int(month), int(day)):
-            raise ValueError("\nPlease enter a valid date format")
+        datetime.strptime(date_input, '%d/%m/%y')
+    except ValueError:
+        print('\nInvalid date or format')
+        return False
+    try:
+        if datetime.strptime(date_input, '%d/%m/%y') > date_today:
+            raise ValueError('\nDate cannot be in the future')
     except ValueError as e:
-        print(f'\nEntry invalid: {e}')
+        print(f'\nError: {e}')
         return False
     return True
 
