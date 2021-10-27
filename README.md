@@ -158,7 +158,7 @@ Enter Vehicle Registration: Enter a valid registration (eg VE70EKU).  Registrati
 Below you can see the flowchart, created with [diagrammes.io](www.diagrammes.io)
 
 <details><summary>Flowchart</summary>
-<img src="docs/flowcharts/flowchartfms.png"></details>
+<img src="docs/flowcharts/flowchart.png"></details>
 
 ### Data models
 
