@@ -14,6 +14,16 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('vehiclebookings')
 catalogue = SHEET.worksheet('catalogue')
 appraisals = SHEET.worksheet('appraisals')
+logins = SHEET.worksheet('logins')
+
+
+def get_logins() -> list:
+    """
+    Pull all values from logins work sheet and return as list
+    of lists
+    """
+    login_data = logins.get_all_records()
+    return login_data
 
 
 def a_data() -> list:

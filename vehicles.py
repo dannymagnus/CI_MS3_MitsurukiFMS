@@ -87,7 +87,9 @@ class Slicker(Car):
     @param heated(string): Y or N value as entered by user input
     @param massage(string): Y or N value as entered by user input
     """
-    def __init__(self, registration, color, heated, massage):
+    def __init__(self, registration: str, color, heated, massage):
+        """
+        """
         super().__init__(registration, color)
         self.model = "Slicker"
         self.powertrain = "Hybrid"
@@ -95,8 +97,8 @@ class Slicker(Car):
         self.heated = heated
         self.type = "SUV"
 
-    """Prints description of car instance"""
     def description(self):
+        """Prints description of car instance"""
         print(f"{self.registration} is the {self.model} model and ")
         print(f"is a {self.type} vehicle with a {self.powertrain} powertrain.")
         print(f"Heated seats: {self.heated}")
@@ -164,7 +166,3 @@ def create_vehicle_list(obj: object) -> list:
         obj.powertrain, obj.color, obj.heated,
         obj.massage]
     return car
-
-
-car = ETronic('ve70ekt', 'Black', 'Y')
-print(car.description())

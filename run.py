@@ -6,6 +6,7 @@ from sheet1 import catalogue
 from sheet1 import delete_vehicle
 from sheet1 import search
 from sheet1 import appraisals_list
+from sheet1 import get_logins
 
 from vehicles import Car
 from vehicles import ETronic
@@ -16,34 +17,67 @@ from vehicles import valid_models
 from vehicles import catalogue_deconstruct
 from vehicles import create_vehicle_list
 
-divider = '-' * 20
+divider = '-' * 30
 vehicle_return = "\nPress <enter> to return the vehicle menu..."
+
+
+def login():
+    """
+    Function to take user input (uid and password) and compare
+    to gsheet data record
+    """
+    print(divider)
+    print(('Mitsuruki Automotive Systems').upper())
+    print(('Fleet management user login').upper())
+    print(divider)
+    uid = input('\nEnter username: ')
+    pwd = input('\nPassword: ')
+    logins = get_logins()
+    if not [x for x in logins if x['username'] == uid]:
+        print('\nNo such user found')
+        print('\nPlease check and try again.')
+        login()
+    else:
+        matched_uid = [x for x in logins if x['username'] == uid][0]
+    if pwd == matched_uid['password']:
+        print('\nLogin successful')
+        main_menu()
+    else:
+        print('\nLogin failed')
+        print('\n Password did not match.')
+        print('\n Please try again.')
+        login()
 
 
 def main_menu():
     """
     Function to get user input on what they want to do with the system
     """
-    choices = 2
+    choices = 3
     print(('\n\nWelcome to the test vehicle appraisal system\n').upper())
     while True:
         print(divider)
         print(('Main menu').upper())
         print(divider)
-        print('\n1:Search vehicle catalogue')
-        print('\n2:Appraisals\n')
+        print('\n1: Search vehicle catalogue')
+        print('\n2: Appraisals')
+        print('\n3: Logout\n')
         selection = input("\nWhat would you like to do?: ")
-        if validateselection(selection, choices):
+        if validate_selection(selection, choices):
             print('Accepted')
             selected = int(selection)
             if selected == 1:
                 vehicle_menu()
-            else:
+                break
+            elif selected == 2:
                 appraisals_menu()
+                break
+            else:
+                login()
             break
 
 
-def validateselection(selection: int, choices: int) -> bool:
+def validate_selection(selection: int, choices: int) -> bool:
     """
     Tries values to see if they are numbers and within the value range
     @param selection(int): Selected menu option from user input on what
@@ -398,4 +432,4 @@ def validate_date_type(date_input: str) -> bool:
     return True
 
 
-main_menu()
+login()
