@@ -180,6 +180,10 @@ The main menu gives a paragraph welcome and introduction to the Fleet Management
 <img src=“docs/features/main-menu.png“>
 </details>
 
+<details><summary>run.py</summary>
+<img src="docs/validation/python-validation/validation-runpy.png">
+</details>
+
 **This screen covers the following user stories:**
 
 *1. As a user I want the option to search vehicles or manage appraisals*
