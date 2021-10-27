@@ -2,7 +2,7 @@ from datetime import datetime
 
 from sheet1 import c_dict
 from sheet1 import append_car
-from sheet1 import catalogue
+from sheet1 import CATALOGUE
 from sheet1 import delete_vehicle
 from sheet1 import search
 from sheet1 import appraisals_list
@@ -299,7 +299,7 @@ def create_vehicle():
             print('\nPlease enter and valid choice (y) or (n)')
         elif choice.capitalize()[0] == 'Y':
             car_list = create_vehicle_list(vehicle)
-            if append_car(catalogue, car_list):
+            if append_car(CATALOGUE, car_list):
                 print('\nVehicle successfully added...')
                 print('\nReturning to the vehicle menu...')
                 input('\nPress <enter> to continue...\n')
