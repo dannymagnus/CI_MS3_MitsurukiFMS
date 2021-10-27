@@ -3,7 +3,7 @@
 
 ![Mockup FMS](docs/mockup/mockup.png)
 
-[View live site](https://dannymagnus.github.io/CI_MS3_Mitsuruki_FMS/)
+[View live site](https://mitsuruki-fms.herokuapp.com/)
 
 ## Table of Content
 
