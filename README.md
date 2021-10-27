@@ -175,6 +175,11 @@ VSCode was the IDE used to write the remainder of the project code.
 5. [Google Sheets](https://www.google.co.uk/sheets/about/) - was used to store data outside of the program.  The vehicle catalogue and appraisal data stored in 2 separate sheets.
 6. [Google Cloud Platform](https://cloud.google.com/cloud-console/) - was used to manage access and permissions to the google services, google auth, sheets etc.
 
+#### Libraries
+
+1. datetime - for date format validation and ensuring user input is not in the future.
+2. gspread - used to manipulate google sheets from the python client.
+
 ## Features
 
 ### Main Menu
