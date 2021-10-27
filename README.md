@@ -181,7 +181,7 @@ The main menu gives a paragraph welcome and introduction to the Fleet Management
 </details>
 
 <details><summary>run.py</summary>
-<img src="docs/validation/python-validation/validation-runpy.png">
+<img src="docs/features/main-menu.png">
 </details>
 
 **This screen covers the following user stories:**
