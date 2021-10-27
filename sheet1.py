@@ -12,9 +12,9 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('vehiclebookings')
-catalogue = SHEET.worksheet('catalogue')
-appraisals = SHEET.worksheet('appraisals')
-logins = SHEET.worksheet('logins')
+CATALOGUE = SHEET.worksheet('catalogue')
+APPRAISALS = SHEET.worksheet('appraisals')
+LOGINS = SHEET.worksheet('logins')
 
 
 def get_logins() -> list:
@@ -22,7 +22,7 @@ def get_logins() -> list:
     Pull all values from logins work sheet and return as list
     of lists
     """
-    login_data = logins.get_all_records()
+    login_data = LOGINS.get_all_records()
     return login_data
 
 
@@ -31,7 +31,7 @@ def a_data() -> list:
     Pull all values from appraisals work sheet and return as list
     of lists
     """
-    a_data = appraisals.get_all_values()
+    a_data = APPRAISALS.get_all_values()
     return a_data
 
 
@@ -40,7 +40,7 @@ def a_dict() -> list:
     Pull all values from appraisals work sheet and return as
     list of dictionaries
     """
-    a_dict = appraisals.get_all_records()
+    a_dict = APPRAISALS.get_all_records()
     return a_dict
 
 
@@ -49,7 +49,7 @@ def c_dict() -> list:
     Pull all values from catalogue work sheet and return as
     list of dictionaries
     """
-    c_dict = catalogue.get_all_records()
+    c_dict = CATALOGUE.get_all_records()
     return c_dict
 
 
@@ -69,9 +69,9 @@ def delete_vehicle(reg: str):
     Locates reg values in gsheet (catalogue) and removes the row
     @param reg(string): car registration as inputted by the user
     """
-    cell = catalogue.find(reg)
+    cell = CATALOGUE.find(reg)
     row_number = cell.row
-    catalogue.delete_rows(row_number)
+    CATALOGUE.delete_rows(row_number)
     print('\nVehicle was successfully deleted.......')
 
 

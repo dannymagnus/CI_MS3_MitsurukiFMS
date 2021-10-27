@@ -17,8 +17,8 @@ from vehicles import valid_models
 from vehicles import catalogue_deconstruct
 from vehicles import create_vehicle_list
 
-divider = '-' * 30
-vehicle_return = "\nPress <enter> to return the vehicle menu...\n"
+DIVIDER = '-' * 30
+VEHICLE_RETURN = "\nPress <enter> to return the vehicle menu...\n"
 
 
 def login():
@@ -26,10 +26,10 @@ def login():
     Function to take user input (uid and password) and compare
     to gsheet data record
     """
-    print(divider)
+    print(DIVIDER)
     print(('Mitsuruki Automotive Systems').upper())
     print(('Fleet management user login').upper())
-    print(divider)
+    print(DIVIDER)
     uid = input('\nEnter username: \n')
     pwd = input('\nPassword: \n')
     logins = get_logins()
@@ -56,9 +56,9 @@ def main_menu():
     choices = 3
     print(('\n\nWelcome to the test vehicle appraisal system\n').upper())
     while True:
-        print(divider)
+        print(DIVIDER)
         print(('Main menu').upper())
-        print(divider)
+        print(DIVIDER)
         print('\n1: Search vehicle catalogue')
         print('\n2: Appraisals')
         print('\n3: Logout\n')
@@ -108,9 +108,9 @@ def vehicle_menu():
     vm_selection = ''
     while vm_selection not in ['1', '2', '3', '4']:
         print('\n')
-        print(divider)
+        print(DIVIDER)
         print(('Vehicle Menu').upper())
-        print(divider)
+        print(DIVIDER)
         print('\nYou can search vehciles in the current engineering fleet.')
         print('You can also add and remove vehicles.')
         print('\n1: Search for a vehicle')
@@ -153,7 +153,7 @@ def vehicle_menu():
                     proceed = delete_input[0].upper()
                     if proceed == 'Y':
                         delete_vehicle(reg)
-                        input(vehicle_return)
+                        input(VEHICLE_RETURN)
                         vehicle_menu()
                         break
                     else:
@@ -206,9 +206,9 @@ def search_car_reg(reg: str):
         if choice == "Y":
             car_details = catalogue_deconstruct(locatedcar)
             print('\n')
-            print(divider)
+            print(DIVIDER)
             car_details.description()
-            print(divider)
+            print(DIVIDER)
             input(
                 '\nPress <enter> to return to the vehicle menu....\n'
                 )
@@ -326,9 +326,9 @@ def appraisals_menu():
     am_selection = ''
     while am_selection not in ['1', '2', '3']:
         print('\n')
-        print(divider)
+        print(DIVIDER)
         print(('Appraisals menu').upper())
-        print(divider)
+        print(DIVIDER)
         print('\nHere you can search for or add appraisals')
         print('\n1: Add vehicle appraisal')
         print('\n2: Search vehicle appraisal')
@@ -392,7 +392,7 @@ def appraisals_menu():
                     for d, a in zip(dates, appraisals):
                         print(f"\nDate: {d}")
                         print(f"\nDetails: {a}\n")
-                        print(divider)
+                        print(DIVIDER)
                     print('\nReport complete.')
                     input('\nPress enter to return to appraisals menu...\n')
                     appraisals_menu()
