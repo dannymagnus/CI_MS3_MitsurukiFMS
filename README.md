@@ -13,7 +13,8 @@
 2. [User Experience](#user-experience)
     1. [Target Audience](#target-audience)
     2. [User Stories](#user-stories)
-    3. [User Manual](#user-manual)
+    3. [Scope](#scope)
+    4. [User Manual](#user-manual)
 3. [Technical Design](#technical-design)
     1. [Flowchart](#flowchart)
     2. [Data Models](#data-models)   
@@ -32,6 +33,8 @@
 ## Project Goals 
 
 - The Fleet Management System is the beginning of a real world application for an automotive company engineering company. Mitsuruki has been used as a fictional as not to infringe any brand or copyright.
+- It enables users to submit feedback from testing vehicles from within a engineering test fleet, so faults can be investigated and remedied before components go to mass production.
+- It also enables users to manage the list of available vehicles.
 
 ### User Goals
 - Be able to search vehicles from an automotive engineering fleet to pick vehicles with feature fitments I wish to assess.
@@ -66,6 +69,11 @@
 10. As a site owner, I want the fleet details to be synced to and from a google sheet.
 11. As a site owner; I want users to be able to submit appraisals which are to be stored in a separate worksheet in the google sheet.
 12. As a site owner, I want data entry to be validated, to guide the user on how to correctly format the input.
+
+### Scope
+
+For the first release, the scope is to be able to search by registration and to print all appraisals.
+For future releases, the ability to search by multiple parameters would be incuded and to search appraisal by date.
 
 ### User Manual
 
