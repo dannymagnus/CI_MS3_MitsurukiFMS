@@ -155,8 +155,9 @@ Below you can see the flowchart, created with [diagrammes.io](www.diagrammes.io)
 ### Data models
 
 For this project I have used largely lists, dictionaries and 4 classes for the vehicle lines themselves.
-As the programme is working closely with Google Sheets, I have used lists and dictionaries.  List to work with adding data and dictionaries to search for objects within the sheets.
-I have used classes for the vehicle lines as some have fitments that others don’t.  Where this is the case, those options are removed from user choice.
+- Classes - I have used 5 classes. One parent class of car, from which the subsequent classes inherit base values and 4 subclasses for each of the vehicle models; Slicker, Slider, ETronic and Trojan.   Each have some similar attibutes which are determined by the user and some unique attributes eg type (estate, pickup etc).
+- Google sheets API.  I have chosen to use Google Sheets API so that the required data for the app will persist outside of the container.
+- As the programme is working closely with Google Sheets, I have used lists and dictionaries.  List to work with adding data to the google sheet and dictionaries to search for objects within the sheets.
 
 ## Technologies Used
 
