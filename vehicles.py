@@ -6,14 +6,17 @@ valid_models = ['Slicker', 'Trojan', 'Slider', 'Etronic']
 class Car:
     """
     To create instance of car class
-    @param registration(string): Registration as entered by the user
-    @param color(string): Color of the car as entered by user input
     """
-    def __init__(self, registration, color):
+    def __init__(self, registration: str, color: str):
+        """
+        Initialisation function for car class
+        @param registration(string): Registration as entered by the user
+        @param color(string): Color of the car as entered by user input
+        """
         self.registration = registration
         self.color = color
 
-    def get_appraisal(self):
+    def get_appraisal(self) -> list:
         """
         Pulls all appraisals from gsheet which match intance created
         """
@@ -34,11 +37,14 @@ class Car:
 class ETronic(Car):
     """
     Creates an instance of 'Etronic' vehicle object
-    @param registration(string): Registration as entered by user input
-    @param color(color): Color of car instance as entered by user input
-    @param heated(string): Y or N value as entered by user input
     """
-    def __init__(self, registration, color, heated):
+    def __init__(self, registration: str, color: str, heated: str):
+        """
+        Initialisation function for the ETronic class
+        @param registration(string): Registration as entered by user input
+        @param color(color): Color of car instance as entered by user input
+        @param heated(string): Y or N value as entered by user input
+        """
         super().__init__(registration, color)
         self.model = "Etronic"
         self.powertrain = "Battery"
@@ -46,8 +52,8 @@ class ETronic(Car):
         self.heated = heated
         self.type = "Estate"
 
-    """Prints description of car instance"""
     def description(self):
+        """Prints description of car instance"""
         print(f"{self.registration} is the {self.model} model and ")
         print(f"is a {self.type} vehicle with a {self.powertrain} powertrain.")
         print(f"Heated seats: {self.heated}")
@@ -57,12 +63,11 @@ class ETronic(Car):
 class Trojan(Car):
     """
     Creates an instance of 'Trojan' vehicle object
-    @param registration(string): Registration as entered by user input
-    @param color(color): Color of car instance as entered by user input
-    @param heated(string): Y or N value as entered by user input
-    @param massage(string): Y or N value as entered by user input
     """
-    def __init__(self, registration, color, heated, massage):
+    def __init__(self, registration: str, color: str, heated: str, massage: str):
+        """
+        Initialisation function for the Trojan class
+        """
         super().__init__(registration, color)
         self.model = "Trojan"
         self.powertrain = "Combustion"
@@ -70,8 +75,8 @@ class Trojan(Car):
         self.heated = heated
         self.type = "Pickup"
 
-    """Prints description of car instance"""
     def description(self):
+        """Prints description of car instance"""
         print(f"{self.registration} is the {self.model} model and ")
         print(f"is a {self.type} vehicle with a {self.powertrain} powertrain.")
         print(f"Heated seats: {self.heated}")
@@ -82,13 +87,14 @@ class Trojan(Car):
 class Slicker(Car):
     """
     Creates an instance of 'Slicker' vehicle object
-    @param registration(string): Registration as entered by user input
-    @param color(color): Color of car instance as entered by user input
-    @param heated(string): Y or N value as entered by user input
-    @param massage(string): Y or N value as entered by user input
     """
-    def __init__(self, registration: str, color, heated, massage):
+    def __init__(self, registration: str, color: str, heated: str, massage: str):
         """
+        Initialisation function for Slicker class
+        @param registration(string): Registration as entered by user input
+        @param color(color): Color of car instance as entered by user input
+        @param heated(string): Y or N value as entered by user input
+        @param massage(string): Y or N value as entered by user input
         """
         super().__init__(registration, color)
         self.model = "Slicker"
@@ -109,12 +115,17 @@ class Slicker(Car):
 class Slider(Car):
     """
     Creates an instance of 'Slider' vehicle object
-    @param registration(string): Registration as entered by user input
-    @param color(color): Color of car instance as entered by user input
-    @param heated(string): Y or N value as entered by user input
-    @param massage(string): Y or N value as entered by user input
     """
-    def __init__(self, registration, color, heated, massage):
+    def __init__(
+        self, registration: str, color: str, heated: str, massage: str
+            ):
+        """
+        Initialisation function for Slider class
+        @param registration(string): Registration as entered by user input
+        @param color(color): Color of car instance as entered by user input
+        @param heated(string): Y or N value as entered by user input
+        @param massage(string): Y or N value as entered by user input
+        """
         super().__init__(registration, color)
         self.model = "Slicker"
         self.powertrain = "Combustion"
@@ -122,8 +133,8 @@ class Slider(Car):
         self.heated = heated
         self.type = "Saloon"
 
-    """Prints description of car instance"""
     def description(self):
+        """Prints description of car instance"""
         print(f"{self.registration} is the {self.model} model and ")
         print(f"is a {self.type} vehicle with a {self.powertrain} powertrain.")
         print(f"Heated seats: {self.heated}")
