@@ -464,6 +464,7 @@ The Python code of the each module was validated using [PEP8 Validation Service]
 </details>
 
 10. As a site owner, I want the fleet details to be synced to and from a google sheet.
+
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
 | Find Vehicle Menu  |   Add vehicle and confirm to add  | Google sheet is updated with vehcile details | Works as expected |
