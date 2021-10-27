@@ -94,11 +94,11 @@ def vehicle_menu():
                     '\nEnter the vehicle registration or <enter> to exit: '
                     )
                 reg = reg_input.upper()
-                if vehicle_validation(reg, c_dict()):
-                    search_car_reg(reg)
-                elif reg == '':
+                if reg == '':
                     print('\nReturning to vehicle menu....')
                     vehicle_menu()
+                elif vehicle_validation(reg, c_dict()):
+                    search_car_reg(reg)
                 else:
                     print('\nPlease check the registration and try again...')
         elif vm_selection == '2':
@@ -144,7 +144,7 @@ def vehicle_validation(reg: str, vehicles: object) -> bool:
         if not [element for element in vehicles if element['Reg'] == reg]:
             raise ValueError("No such vehicle in fleet management database")
     except ValueError as e:
-        print(f"Invalid selection: {e}")
+        print(f"\nInvalid selection: {e}")
         return False
     return True
 
@@ -169,7 +169,7 @@ def search_car_reg(reg: str):
             car_details = catalogue_deconstruct(locatedcar)
             print('\n')
             print(divider)
-            print(car_details.description())
+            car_details.description()
             print(divider)
             input(
                 '\nPress <enter> to return to the vehicle menu....'

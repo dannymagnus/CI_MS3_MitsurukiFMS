@@ -164,3 +164,7 @@ def create_vehicle_list(obj: object) -> list:
         obj.powertrain, obj.color, obj.heated,
         obj.massage]
     return car
+
+
+car = ETronic('ve70ekt', 'Black', 'Y')
+print(car.description())
